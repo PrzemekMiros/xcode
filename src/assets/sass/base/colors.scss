@@ -1,0 +1,19 @@
+:root, 
+.light {
+    --color-dark-1: #0e0f0f;
+    --color-light-1: #fff;
+    --color-accent-1: #ff5b49;
+    --border-color-1: #8b8b8b3b;
+}
+
+.dark {
+    --color-dark-1: #fff;
+    --color-light-1: #0e0f0f;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --color-dark-1: #fff;
+        --color-light-1: #0e0f0f;
+    }
+}

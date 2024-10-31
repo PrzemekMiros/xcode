@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }} - {{ meta.siteName }}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-5 col-md-2">
+                        <a href="/" class="logo">
+                            <img src="/assets/img/logo/logo-light.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-3 col-md-8">
+                        <nav class="main-menu d-none d-md-block">
+                            <ul>
+                                <li>
+                                    <a href="/uslugi/">Usługi</a>
+                                </li>
+                                <li>
+                                    <a href="/realizacje/">Realizacje</a>
+                                </li>
+                                <li>
+                                    <a href="#">Porady</a>
+                                </li>
+                                <li>
+                                    <a href="#">O mnie</a>
+                                </li>
+                                </li>
+                                <li>
+                                    <a href="#">Kontakt</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <button class="change-theme">Zmień motyw</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="swup" class="transition-fade pt-5">

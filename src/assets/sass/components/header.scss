@@ -1,0 +1,26 @@
+header {
+    padding-top: .4em;
+    padding-bottom: .7em;
+    border-bottom: 1px solid var(--border-color-1);
+}
+
+.logo img {
+    width: 155px;
+}
+
+.main-menu ul li {
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.main-menu ul li a {
+    color: var(--color-dark);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.main-menu ul li a::before {
+
+}
