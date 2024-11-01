@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+title: Porady
+description: Skontaktuj się ze mną telefonicznie, mailowo lub poprzez formularz kontaktowy. Chętnie podpowiem i pomogę wybrać optymalne rozwiązanie.
+---
+
+<section class="my-5 py-5">
+    <div class="container">
+    <div class="row g-4">
+    {% for post in collections.posts %}
+        <div class="col-md-6 mb-4">
+        {% postImage "src/" + post.data.thumbnail, post.data.title %}
+        <h2>
+            {{ post.data.title }}
+        </h2>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+</section>
