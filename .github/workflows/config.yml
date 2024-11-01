@@ -31,4 +31,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./public/  # Upewnij się, że to jest poprawny folder
-        server-dir: /www/eleven/  # Folder na serwerze OVH
+        server-dir: /www/  # Folder na serwerze OVH
