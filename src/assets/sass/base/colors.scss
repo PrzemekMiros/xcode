@@ -2,7 +2,7 @@
 .light {
     --color-dark-1: #0e0f0f;
     --color-light-1: #fff;
-    --color-accent-1: #c12323;
+    --color-accent-1: #c54939;
     --border-color-1: #8b8b8b3b;
 }
 
@@ -17,3 +17,21 @@
         --color-light-1: #0e0f0f;
     }
 }
+
+
+
+.logo-light,
+.icon-light {
+    display: none;
+}
+
+.dark .icon-light,
+.dark .logo-light {
+    display: block!important
+}
+
+.dark .icon-dark,
+.dark .logo-dark {
+    display: none!important
+}
+

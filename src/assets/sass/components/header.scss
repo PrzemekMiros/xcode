@@ -53,3 +53,28 @@ header {
         opacity: 0;
     }
 }
+
+.button-theme {
+    position: relative;
+    cursor: pointer;
+}
+
+.button-theme .button-theme-text {
+    position: absolute;
+    width: max-content;
+    bottom: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .4em 1.3em;
+    background-color: var(--color-dark-1);
+    color: var(--color-light-1);
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    transition: .2s ease-in-out;
+    opacity: 0;
+}
+
+.button-theme:hover .button-theme-text {
+ opacity: 1;
+}

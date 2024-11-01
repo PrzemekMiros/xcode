@@ -1,4 +1,4 @@
-const changeTheme = document.querySelector(".change-theme");
+const changeTheme = document.querySelector(".button-theme");
 let theme = localStorage.getItem("theme");
 
 const applyTheme = (theme) => {
