@@ -1,5 +1,10 @@
-.container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl{
-    width:100%;
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl{
     padding-right:var(--bs-gutter-x,.75rem);
     padding-left:var(--bs-gutter-x,.75rem);
     margin-right:auto;
@@ -7,6 +12,7 @@
 }
 @media (min-width:576px){
     .container,.container-sm{
+        width:100%;
         max-width:540px
     }
 }

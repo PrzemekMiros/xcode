@@ -48,7 +48,7 @@
                 z-index: 10000000;
             }
 
-            .scrollContainer {
+            .site-main {
                 opacity: 0;
                 transition: opacity 0.2s ease-out;
             }
@@ -206,7 +206,7 @@
                 </div>
             </div>
         </header>
-        <main id="swup" class="site-main transition-fade pt-5">
+        <div class="site-main">
             <script>
                 var obj = document.querySelector('.preloader'),
                     page = document.querySelector('.site-main');
@@ -215,3 +215,4 @@
                     page.style.opacity = "1";
                 });
             </script>
+        <main id="swup" class="transition-fade pt-5">

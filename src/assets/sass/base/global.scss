@@ -3,6 +3,9 @@ body {
     background: var(--color-light-1);
     color: var(--color-dark-1);
     font-family: "DM Sans", sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
 }
 
 /*
