@@ -72,7 +72,6 @@ a {
 }
 
 .avatars-wrap {
-  margin-left: 2em;
   margin-right: .5em;
 }
 
@@ -93,6 +92,12 @@ a {
 
 .avatars-desc span:first-child {
   opacity: .65;
+}
+
+@media(min-width:767px) {
+  .avatars-wrap {
+    margin-left: 2em;
+  }  
 }
 
 
