@@ -1,3 +1,4 @@
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
     // Konfiguracja
@@ -28,8 +29,8 @@ module.exports = function(eleventyConfig) {
         let stats = await Image(src, {
           widths: [25, 320, 640, 960, 1200, 1800 ],
           formats: ['jpeg', 'webp'],
-          urlPath: '/content/realizacje/img/',
-          outputDir: './public/content/realizacje/img/',
+          urlPath: '/content/works/img/',
+          outputDir: './public/content/works/img/',
         });
     
         let lowestSrc = stats['jpeg'][0];

@@ -1,9 +1,14 @@
-<section class="my-5">
+<section class="my-5 py-5">
     <div class="container">
+    <div class="row">
     {% for post in collections.works.slice(0, 3) %}
+        <div class="col-md-4 mb-4">
+        {% workImage "src/" + post.data.thumbnail, post.data.title %}
         <h2>
             {{ post.data.title }}
         </h2>
+        </div>
     {% endfor %}
+    </div>
     </div>
 </section>
