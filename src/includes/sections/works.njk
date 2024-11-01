@@ -1,0 +1,9 @@
+<section class="my-5">
+    <div class="container">
+    {% for post in collections.works.slice(0, 3) %}
+        <h2>
+            {{ post.data.title }}
+        </h2>
+    {% endfor %}
+    </div>
+</section>
