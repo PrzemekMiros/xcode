@@ -1,55 +1,57 @@
-/* dm-sans-300 - latin_latin-ext */
+
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap; 
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 300;
-    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-300.woff2') format('woff2'); 
   }
   
-  /* dm-sans-regular - latin_latin-ext */
   @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap; 
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-regular.woff2') format('woff2'); 
   }
   
-  /* dm-sans-500 - latin_latin-ext */
   @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap; 
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
-    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-500.woff2') format('woff2'); 
   }
   
-  /* dm-sans-600 - latin_latin-ext */
   @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap; 
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 600;
-    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-600.woff2') format('woff2'); 
   }
-  
-  /* dm-sans-700 - latin_latin-ext */
+
   @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap; 
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/assets/fonts/dm-sans-v15-latin_latin-ext-700.woff2') format('woff2'); 
   }
   
 
 h1 {
     font-size: clamp(44px, 4.2vw, 70px);
+    font-weight: 600;
     line-height: 1.2;
 }
 
 p {
     font-size: 19px;
     line-height: 1.6;
+    color: var(--color-text);
+}
+
+small {
+  font-size: 75%;
 }

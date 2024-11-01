@@ -1,20 +1,29 @@
 :root, 
 .light {
-    --color-dark-1: #0e0f0f;
     --color-light-1: #fff;
+    --color-light-2: #f7f7f7;
+    --color-dark-1: #0e0f0f;
+    --color-dark-2: #171818;
     --color-accent-1: #c54939;
-    --border-color-1: #8b8b8b3b;
+    --color-accent-2: #8e22c0;
+    --color-border-1: #8b8b8b3b;
+    --color-text: #505459;
 }
 
 .dark {
-    --color-dark-1: #fff;
     --color-light-1: #0e0f0f;
+    --color-light-2: #171818;
+    --color-dark-1: #fff;
+    --color-dark-2: #f7f7f7;
+    --color-text: #b7b8ba;
 }
 
 @media(prefers-color-scheme: dark) {
     :root {
-        --color-dark-1: #fff;
         --color-light-1: #0e0f0f;
+        --color-light-2: #171818;
+        --color-dark-1: #fff;
+        --color-dark-2: #f7f7f7;
     }
 }
 

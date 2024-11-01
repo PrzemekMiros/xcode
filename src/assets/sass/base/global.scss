@@ -5,6 +5,21 @@ body {
     font-family: "DM Sans", sans-serif;
 }
 
+body::before {
+  --line: var(--color-border-1);
+  --cell: 60px;
+  content: "";
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, var(--line) 1px, transparent 1px var(--cell)) 0 calc(var(--cell) * -0.5) / var(--cell) var(--cell), linear-gradient(var(--line) 1px, transparent 1px var(--cell)) 0 calc(var(--cell) * -0.5) / var(--cell) var(--cell);
+  -webkit-mask: linear-gradient(-15deg, transparent 30%, var(--color-light-1));
+  mask: linear-gradient(-15deg, transparent 30%, var(--color-light-1));
+  pointer-events: none;
+  z-index: -1
+}
+
 main {
     min-height: 100vh;
 }
@@ -32,6 +47,38 @@ a {
 .hero-svg svg {
     width: 250px;
     height: auto;
+}
+
+.avatars-wrap {
+  margin-left: 2em;
+  margin-right: .5em;
+}
+
+.avatars-wrap img {
+  width: 40px;
+  margin-right: -0.65em;
+  border: 3px solid var(--color-light-1);
+  border-radius: 50%;
+}
+
+.avatars-wrap img:last-child {
+  margin-right: .5em
+}
+
+.avatars-desc span {
+  font-size: 14px;
+}
+
+.avatars-desc span:first-child {
+  opacity: .55;
+}
+
+
+.service-card {
+  padding: 2em;
+  background: var(--color-light-2);
+  border: 1px solid var(--border-color-1);
+  border-radius: 12px;
 }
 
 
