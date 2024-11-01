@@ -10,10 +10,11 @@ header {
 
 .main-menu ul li {
     display: inline-block;
-    margin-right: 2em;
+    margin-right: 3em;
 }
 
 .main-menu ul li a {
+    position: relative;
     color: var(--color-dark);
     font-size: 14px;
     font-weight: 600;
@@ -22,5 +23,18 @@ header {
 }
 
 .main-menu ul li a::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -1.3em;
+    width: 8px;
+    height: 8px;
+    transform: translateY(-50%);
+    background-color: var(--color-accent-1);
+    border-radius: 50%;
+    opacity: 0;
+}
 
+.main-menu ul li a.link-active::before {
+    opacity: 1
 }
