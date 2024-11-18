@@ -26,6 +26,10 @@ body::before {
 */
 
 .grid-wrap {
+
+
+  display: none;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -133,7 +137,7 @@ opacity: .65;
   bottom: 0;
   background-color: var(--color-light-3);
   filter: blur(100px);
-  opacity: .8;
+  opacity: .5;
 }
 
 @media(min-width:767px) {
@@ -156,17 +160,25 @@ opacity: .65;
   background-color: var(--color-accent-1);
   filter: blur(300px);
   border-radius: 100%;
-  width: 35rem;
-  height: 35rem;
+  width: 21em;
+  height: 21em;
   position: absolute;
-  top: -3em;
-  left: -5em;
+  top: 0em;
+  left: 0em;
   filter: blur(200px);
   overflow: visible;
-  opacity: .2;
-  z-index: -1;
+  opacity: .3;
+  z-index: -2;
 }
 
+@media(min-width:767px) {
+  .decoration-circle {
+    width: 35em;
+    height: 35em;
+    top: -3em;
+    left: -5em;
+  }
+}
 
 
 
