@@ -2,7 +2,7 @@ body {
     margin: 0;
     background: var(--color-light-1);
     color: var(--color-dark-1);
-    font-family: "DM Sans", sans-serif;
+    font-family: "Manrope", sans-serif;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
     text-rendering:optimizeLegibility;
@@ -112,7 +112,60 @@ opacity: .65;
 }
 
 
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--color-light-2);
+  z-index: -1;
+}
 
+.blur-overlay::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-light-3);
+  filter: blur(100px);
+  opacity: .8;
+}
+
+@media(min-width:767px) {
+  .blur-overlay {
+    top: -2.5em;
+    left: -3em;
+    right: -3em;
+    bottom: 6em;
+  }
+  .blur-overlay::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+.decoration-circle {
+  background-color: var(--color-accent-1);
+  filter: blur(300px);
+  border-radius: 100%;
+  width: 35rem;
+  height: 35rem;
+  position: absolute;
+  top: -3em;
+  left: -5em;
+  filter: blur(200px);
+  overflow: visible;
+  opacity: .2;
+  z-index: -1;
+}
 
 
 
