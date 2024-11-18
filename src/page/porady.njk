@@ -9,9 +9,9 @@ description: Skontaktuj się ze mną telefonicznie, mailowo lub poprzez formular
     {% for post in collections.posts %}
         <div class="col-md-6 mb-4">
         {% postImage "src/" + post.data.thumbnail, post.data.title %}
-        <h2>
+        <h3>
             {{ post.data.title }}
-        </h2>
+        </h3>
         </div>
     {% endfor %}
     </div>

@@ -11,9 +11,9 @@ description: Zobacz wybrane realizacje stron, sklepów i portali internetowych k
     {% for post in collections.works %}
         <div class="col-md-6 mb-4">
         {% workImage "src/" + post.data.thumbnail, post.data.title %}
-        <h2>
+        <h3>
             {{ post.data.title }}
-        </h2>
+        </h3>
         </div>
     {% endfor %}
     </div>
