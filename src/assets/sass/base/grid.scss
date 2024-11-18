@@ -12,13 +12,13 @@
 }
 @media (min-width:576px){
     .container,.container-sm{
-        width:100%;
         max-width:540px
     }
 }
 @media (min-width:768px){
     .container,.container-md,.container-sm{
-        max-width:720px
+        max-width:720px;
+        width:100%;
     }
 }
 @media (min-width:992px){

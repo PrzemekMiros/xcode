@@ -1,12 +1,22 @@
-<section class="my-5 py-5">
+<section class="my-5 py-5 radius-lg bg-dark-1">
     <div class="container">
-    <div class="row">
-    {% for post in collections.works.slice(0, 3) %}
-        <div class="col-md-4 mb-4">
-        {% workImage "src/" + post.data.thumbnail, post.data.title %}
-        <h2>
-            {{ post.data.title }}
+        <h2 class="color-light-1">
+            Wybrane realizacje
         </h2>
+    <div class="row">
+    {% for post in collections.works.slice(0, 6) %}
+        <div class="col-md-6 mb-4">
+           <div class="work-card bg-dark-2 radius-md">
+                {% workImage "src/" + post.data.thumbnail, post.data.title %}
+                <div class="work-card-content p-4">
+                    <p class="my-0 bold color-accent-1"> 
+                        {{ post.data.client }}
+                    </p>
+                    <h3 class="mt-2 color-light-1">
+                        {{ post.data.title }}
+                    </h3>
+                </div>
+           </div>
         </div>
     {% endfor %}
     </div>

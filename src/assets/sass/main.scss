@@ -3,8 +3,11 @@
 @use 'base/typography.scss';
 @use 'base/grid.scss';
 @use 'base/transitions.scss';
+@use 'base/spacings.scss';
 @use 'base/global.scss';
 @use 'base/cookies.scss';
 
+@use 'components/blurimage.scss';
 @use 'components/header.scss';
 @use 'components/button.scss';
+@use 'components/helpers.scss';
