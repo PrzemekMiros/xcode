@@ -47,21 +47,41 @@ link.classList.remove('link-active');
         }
     });
 
-// Lazy blur images
-if (document.querySelector(".blur-load")) {
-const blurImgWrap = document.querySelectorAll(".blur-load");
-blurImgWrap.forEach((item) => {
-const img = item.querySelector("picture img");
-function loaded() {
-item.classList.add("loaded");
-}
-if (img.complete) {
-loaded();
-} else {
-img.addEventListener("load", loaded);
-}
-});
-}
+
+    // Lazy blur images
+    if (document.querySelector(".blur-load")) {
+        const blurImgWrap = document.querySelectorAll(".blur-load");
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const item = entry.target;
+                    const img = item.querySelector("picture img");
+    
+                    function loaded() {
+                        item.classList.add("loaded");
+                    }
+    
+                    if (img.complete) {
+                        loaded();
+                    } else {
+                        img.addEventListener("load", loaded);
+                    }
+    
+                    // Przestań obserwować element po jego załadowaniu
+                    observer.unobserve(item);
+                }
+            });
+        }, {
+            root: null, // Domyślnie okno przeglądarki
+            threshold: 0.1 // Obraz wczytywany, gdy co najmniej 10% elementu jest w widoku
+        });
+    
+        blurImgWrap.forEach((item) => {
+            observer.observe(item);
+        });
+    }
+    
 
 
 }
