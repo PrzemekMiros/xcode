@@ -8,7 +8,7 @@ description: Wykonana według dostarczonego projektu graficznego. Oparta na syst
 link: https://ecotechgroup.pl/
 category:
   - Strona internetowa
-order: 3
+order: 5
 ---
 
 ## Dystrybutor rur stalowych

@@ -84,6 +84,39 @@ link.classList.remove('link-active');
         });
     }
     
+    if (document.querySelector('.swiper-works')) {
+		var swiper = new Swiper(".swiper-works", {
+			grabCursor: true,
+			slidesPerView: 2,
+			spaceBetween: 15,
+			centeredSlides: false,
+			loop: true,
+			lazy: {
+				loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
+				loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				delay: 4000,
+			},
+			keyboard: {
+				enabled: true
+			},
+			mousewheel: false,
+		});
+	};
 
+
+    
 
 }
