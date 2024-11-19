@@ -1,6 +1,7 @@
 header {
     padding-top: 2em;
     padding-bottom: 1.5em;
+    background: var(--color-dark-1);
 }
 
 .logo img {
@@ -18,7 +19,7 @@ header {
 
 .main-menu ul li a {
     position: relative;
-    color: var(--color-dark);
+    color: var(--color-light-1);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;

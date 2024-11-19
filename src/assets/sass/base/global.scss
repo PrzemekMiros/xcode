@@ -73,7 +73,7 @@ a {
 .hero-svg {
   padding: .35em 1em .25em;
   width: fit-content;
-  background-color: var(--color-light-2);
+  background-color: var(--color-dark-2);
   border-radius: 60px;
   border: 1px solid var(--border-color-1);
 }
@@ -90,7 +90,7 @@ margin-right: .5em;
 .avatars-wrap img {
 width: 40px;
 margin-right: -0.65em;
-border: 3px solid var(--color-light-1);
+border: 3px solid var(--color-dark-2);
 border-radius: 50%;
 }
 
@@ -103,7 +103,7 @@ font-size: 14px;
 }
 
 .avatars-desc span:first-child {
-opacity: .65;
+opacity: .7;
 }
 
 @media(min-width:767px) {
@@ -124,8 +124,8 @@ opacity: .65;
   bottom: 0;
   overflow: hidden;
   border-radius: 15px;
-  border: 1px solid var(--color-light-2);
-  z-index: -1;
+  border: 1px solid var(--color-border-1);
+  z-index: 0;
 }
 
 .blur-overlay::before {
@@ -135,9 +135,9 @@ opacity: .65;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-light-3);
+  background-color: var(--color-dark-2);
   filter: blur(100px);
-  opacity: .5;
+  opacity: .75;
 }
 
 @media(min-width:767px) {
@@ -167,8 +167,8 @@ opacity: .65;
   left: 0em;
   filter: blur(200px);
   overflow: visible;
-  opacity: .3;
-  z-index: -2;
+  opacity: .4;
+  z-index: -1;
 }
 
 @media(min-width:767px) {
