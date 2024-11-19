@@ -7,7 +7,7 @@ author: Przemek
 client: EGP System
 link: https://egp-system.com/
 thumbnail: /content/works/img/egp-thumb-big.jpg
-order: 5
+order: 9
 date: 2021-08-29T22:00:00.000Z
 category:
   - Sklep internetowy

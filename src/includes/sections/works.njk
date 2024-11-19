@@ -1,10 +1,10 @@
 <section class="pt-small pt-md-medium pb-medium bg-light-1 radius-lg mt-minus-small" id="realizacje">
     <div class="container">
         <h2 class="mt-0 mb-5">
-            Sprawdź <span class="underline"> wybrane </span> realizacje
+            <span class="underline">Wybrane </span> realizacje
         </h2>
     <div class="row">
-    {% for post in collections.works.slice(0, 4) %}
+    {% for post in collections.works.slice(0, 5) %}
         <div class="col-md-6 mb-4">
            <div class="work-card radius-sm">
                 <a href="#">
@@ -18,7 +18,7 @@
                     </h3>
                 </div>
                 </a>
-           </div>
+           </div> 
         </div>
     {% endfor %} 
     </div>

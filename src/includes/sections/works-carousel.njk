@@ -1,17 +1,25 @@
 <section class="pt-medium pb-medium radius-lg bg-light-1">
     <div class="container">
         <h2 class="mt-0 mb-5">
-            Sprawdź <span class="underline"> wybrane </span> realizacje
+            <span class="underline">Wybrane </span> realizacje
         </h2>
             <div class="swiper swiper-works">
                 <div class="swiper-wrapper"> 
-                    {% for post in collections.works.slice(0, 4) %} 
+                    {% for post in collections.works.slice(0, 6) %} 
                     <div class="swiper-slide">
-                            <a href="{{ post.url }}" title="{{ post.data.title }}">
-                                <div class="portfolio-item fade-in">
-                                        {% workImage "src/" + post.data.thumbnail, post.data.title %} 
-                                </div>
+                        <div class="work-card radius-sm">
+                            <a href="#">
+                            {% workImage "src/" + post.data.thumbnail, post.data.title %}
+                            <div class="work-card-content p-4">
+                                <p class="subheading my-0 bold color-accent-1"> 
+                                    {{ post.data.client }}
+                                </p>
+                                <h3 class="mt-2 color-light-1">
+                                    {{ post.data.title }}
+                                </h3>
+                            </div>
                             </a>
+                       </div>
                     </div>
                     {% endfor %}
                 </div>
@@ -32,3 +40,54 @@
 
     </div>
 </section>
+
+<style>
+    .work-card {
+        position: relative
+    }
+    .work-card::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(13,13,13);
+        background: linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(14,14,14,1) 100%); 
+        transition: .4s ease-in-out;
+        pointer-events: none;
+        opacity: 0.75;
+        z-index: 1;
+    }
+    .work-card-content {
+        position: absolute;
+        bottom: -1em;
+        left: 1em;
+        transition: .4s ease-in-out;
+        opacity: 1;
+        z-index: 3;
+    }
+    .work-card picture img {
+        transition: .4s ease-in-out;
+    }
+
+    @media(min-width:767px) {
+    .work-card::before {
+        opacity: .05
+    }
+    .work-card-content {
+        left: 1.8em;
+        opacity: 0;
+    }
+    .work-card:hover::before {
+        opacity: .9;
+    }
+    .work-card:hover picture img {
+        transform: scale(1.1);
+    }
+    .work-card:hover .work-card-content {
+        bottom: 0em;
+        opacity: 1;
+    }
+    }
+</style>

@@ -26,10 +26,7 @@ body::before {
 */
 
 .grid-wrap {
-
-
   display: none;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -68,54 +65,7 @@ a {
 
 
 
-  
-
-.hero-svg {
-  padding: .35em 1em .25em;
-  width: fit-content;
-  background-color: var(--color-dark-2);
-  border-radius: 60px;
-  border: 1px solid var(--border-color-1);
-}
-
-.hero-svg svg {
-  width: 250px;
-  height: auto;
-}
-
-.avatars-wrap {
-margin-right: .5em;
-}
-
-.avatars-wrap img {
-width: 40px;
-margin-right: -0.65em;
-border: 3px solid var(--color-dark-2);
-border-radius: 50%;
-}
-
-.avatars-wrap img:last-child {
-margin-right: .5em
-}
-
-.avatars-desc span {
-font-size: 14px;
-}
-
-.avatars-desc span:first-child {
-opacity: .7;
-}
-
-@media(min-width:767px) {
-.avatars-wrap {
-  margin-left: 2em;
-}  
-.hero-img {
-  margin-top: -50px;
-}
-}
-
-
+ 
 .blur-overlay {
   position: absolute;
   top: 0;

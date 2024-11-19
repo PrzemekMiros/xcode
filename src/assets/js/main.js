@@ -50,47 +50,55 @@ link.classList.remove('link-active');
     });
 
 
-    // Lazy blur images
-    if (document.querySelector(".blur-load")) {
-        const blurImgWrap = document.querySelectorAll(".blur-load");
-    
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const item = entry.target;
+// Lazy blur images
+if (document.querySelector(".blur-load")) {
+    const blurImgWrap = document.querySelectorAll(".blur-load");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const item = entry.target;
+
+                // Sprawdź, czy element nie jest już załadowany
+                if (!item.classList.contains("loaded")) {
                     const img = item.querySelector("picture img");
-    
+
                     function loaded() {
                         item.classList.add("loaded");
+                        observer.unobserve(item); // Przestań obserwować po załadowaniu
                     }
-    
+
                     if (img.complete) {
                         loaded();
                     } else {
                         img.addEventListener("load", loaded);
+                        img.addEventListener("error", () => {
+                            console.error("Image failed to load:", img.src);
+                            observer.unobserve(item); // Odłącz obserwację również przy błędzie
+                        });
                     }
-    
-                    // Przestań obserwować element po jego załadowaniu
-                    observer.unobserve(item);
                 }
-            });
-        }, {
-            root: null, // Domyślnie okno przeglądarki
-            threshold: 0.1 // Obraz wczytywany, gdy co najmniej 10% elementu jest w widoku
+            }
         });
-    
-        blurImgWrap.forEach((item) => {
-            observer.observe(item);
-        });
-    }
+    }, {
+        root: null, // Domyślnie okno przeglądarki
+        threshold: 0.1 // Obraz wczytywany, gdy co najmniej 10% elementu jest w widoku
+    });
+
+    blurImgWrap.forEach((item) => {
+        observer.observe(item);
+    });
+}
+
     
     if (document.querySelector('.swiper-works')) {
 		var swiper = new Swiper(".swiper-works", {
+            parallax: true,
 			grabCursor: true,
-			slidesPerView: 2,
+			slidesPerView: 1,
 			spaceBetween: 15,
 			centeredSlides: false,
-			loop: true,
+			loop: false,
 			lazy: {
 				loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
 				loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
@@ -113,6 +121,16 @@ link.classList.remove('link-active');
 				enabled: true
 			},
 			mousewheel: false,
+            breakpoints: {
+                // when window width is >= 480px
+                480: {
+                  slidesPerView: 2
+                },
+                // when window width is >= 640px
+                640: {
+                  slidesPerView: 2
+                }
+            }
 		});
 	};
 
