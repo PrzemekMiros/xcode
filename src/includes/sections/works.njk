@@ -1,7 +1,7 @@
 <section class="pt-small pt-md-medium pb-medium bg-light-1 radius-lg mt-minus-small" id="realizacje">
     <div class="container">
         <h2 class="mt-0 mb-5">
-            <span class="underline">Wybrane </span> realizacje
+            Sprawdź <span class="underline"> wybrane </span> realizacje
         </h2>
     <div class="row">
     {% for post in collections.works.slice(0, 4) %}
@@ -22,6 +22,14 @@
         </div>
     {% endfor %} 
     </div>
+    <a href="/realizacje/" class="pm-button mt-4">
+        <span>
+            Wszystkie realizacje
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+            <path d="M11.793 18.2273L13.207 19.6413L19.914 12.9343L13.207 6.22729L11.793 7.64129L16.086 11.9343H6.5V13.9343H16.086L11.793 18.2273Z" fill="currentColor"></path>
+        </svg>
+    </a>
     </div>
 </section>
 

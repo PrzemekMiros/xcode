@@ -1,3 +1,4 @@
+/*
 const changeTheme = document.querySelector(".button-theme");
 let theme = localStorage.getItem("theme");
 
@@ -24,6 +25,7 @@ systemPrefersDark.addEventListener("change", (e) => {
         applyTheme(e.matches ? "dark" : "light");
     }
 });
+*/
 
 function mainApp() {
 

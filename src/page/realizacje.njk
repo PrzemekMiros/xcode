@@ -3,11 +3,9 @@ title: Realizacje
 description: Zobacz wybrane realizacje stron, sklepów i portali internetowych które wykonałem.
 ---
 
-
-
-<section class="my-5 py-5">
+<section class="pt-medium pb-medium bg-light-1">
     <div class="container">
-    <div class="row g-5">
+    <div class="row g-3 g-md-4">
     {% for post in collections.works %}
         <div class="col-md-6 mb-4">
         {% workImage "src/" + post.data.thumbnail, post.data.title %}

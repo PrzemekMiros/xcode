@@ -6,7 +6,7 @@ description: Strona i sklep interentowy dla producenta nanokoloidów. Systemem
 author: Przemek
 client: EGP System
 link: https://egp-system.com/
-thumbnail: /content/works/img/mock3.png
+thumbnail: /content/works/img/egp-thumb-big.jpg
 order: 5
 date: 2021-08-29T22:00:00.000Z
 category:
