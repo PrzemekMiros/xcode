@@ -8,7 +8,7 @@ category:
   - Strony internetowa
 link: https://ideal-lift.pl/
 thumbnail: /content/works/img/idealift-thumb-big.jpg
-order: 7
+order: 15
 title: Podnośniki warsztatowe
 date: 2024-07-09T19:21:41.426Z
 ---

@@ -6,7 +6,7 @@ author: Przemek Miros
 client: CSE Dental Progress
 link: https://cse-dentalprogress.pl/
 thumbnail: /content/works/img/moc-cse.png
-order: 5
+order: 4
 date: 2024-05-21T22:00:00.000Z
 category:
   - Strona internetowa
