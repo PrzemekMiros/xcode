@@ -143,9 +143,10 @@ a {
 
 .content-list li {
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: 1.3em;
   list-style: none;
-  font-size: 18px;
+  font-size: 17px;
+  color: var(--color-dark-2);
 }
 
 .content-list li::before {

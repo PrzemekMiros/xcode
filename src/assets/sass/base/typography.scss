@@ -105,6 +105,12 @@ p {
   z-index: 0
 }
 
-.text-end {
-  text-align: end;
+@media(min-width:767px) {
+  .text-md-center {
+    text-align: center;
+  }
+  
+  .text-md-end {
+    text-align: end;
+  }
 }

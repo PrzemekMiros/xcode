@@ -7,7 +7,7 @@
     {% for post in collections.works.slice(0, 6) %}
         <div class="col-md-6 mb-4">
            <div class="work-card radius-sm">
-                <a href="#">
+                <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
                 {% workImage "src/" + post.data.thumbnail, post.data.title %}
                 <div class="work-card-content p-4">
                     <p class="subheading my-0 bold color-accent-1"> 
@@ -55,7 +55,7 @@
     .work-card-content {
         position: absolute;
         bottom: -1em;
-        left: 1em;
+        left: .3em;
         transition: .4s ease-in-out;
         opacity: 1;
         z-index: 3;
