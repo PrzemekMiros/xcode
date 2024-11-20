@@ -69,13 +69,17 @@ h4, .h4 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.6;
     color: var(--color-text);
 }
 
-small {
-  font-size: 75%;
+.small {
+  font-size: 14px;
+}
+
+.large {
+  font-size: 22px;
 }
 
 .bold {
@@ -99,4 +103,8 @@ small {
   background: url("/assets/img/line.svg");
   background-size: cover;
   z-index: 0
+}
+
+.text-end {
+  text-align: end;
 }
