@@ -6,7 +6,7 @@ description: "Strona dla Przychodni Zdrowia. Indywidualny projekt graficzny.
 author: Przemek
 category:
   - Strona internetowa
-thumbnail: /content/works/img/moc-lift.jpg
+thumbnail: /content/works/img/triland-thumb-big.jpg
 order: 19
 title: Przychodnia zdrowia
 date: 2023-03-06T16:58:00.000Z

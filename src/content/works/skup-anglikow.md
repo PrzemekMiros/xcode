@@ -6,7 +6,7 @@ author: Przemek
 category:
   - Strona internetowa
 thumbnail: /content/works/img/angliki-thumb-big.jpg
-order: 13
+order: 19
 title: Skup aut z Anglii
 date: 2023-08-02T13:25:45.709Z
 link: https://skup-anglikow.pl/
