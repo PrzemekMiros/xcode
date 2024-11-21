@@ -4,7 +4,7 @@
             <span class="underline">Wybrane </span> realizacje
         </h2>
     <div class="row">
-    {% for post in collections.works.slice(0, 6) %}
+    {% for post in collections.works.slice(0, 12) %}
         <div class="col-md-6 mb-4">
            <div class="work-card radius-sm">
                 <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">

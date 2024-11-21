@@ -2,7 +2,7 @@
 client: Hotel moment
 author: Przemek Miros
 thumbnail: /content/works/img/moment-thumb-big.jpg
-order: 11
+order: 18
 title: Obiekt hotelowy
 description: Strona dla hotelu w Strzelcach Opolskich. Indywidualny projekt
   graficzny, dedykowany motyw na Wordpressa, dedykowane pola do edycji całej

@@ -7,7 +7,7 @@ client: Business Woman
 category:
   - Portal internetowy
 link: https://businesswomanlife.pl/
-thumbnail: /content/works/img/moc-business.png
+thumbnail: /content/works/img/moc-business.jpg
 order: 1
 date: 2022-09-21T20:19:43.571Z
 ---

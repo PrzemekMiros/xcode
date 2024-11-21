@@ -5,7 +5,7 @@ description: Profesjonalny salonem oferujący bezinwazyjny Japoński, liftinguj�
 author: Przemek Miros
 client: Call Your Soul
 link: https://callyoursoul.pl/
-thumbnail: /content/works/img/moc-soul.png
+thumbnail: /content/works/img/moc-soul.jpg
 order: 3
 date: 2022-11-15T23:00:00.000Z
 category:
