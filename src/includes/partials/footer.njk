@@ -1,51 +1,116 @@
-    </main>
-    </div>
-    <div class="grid-wrap">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-md-3 grid-line"></div>
-                <div class="col-md-3 grid-line"></div>
-                <div class="col-md-3 grid-line"></div>
-                <div class="col-md-3 grid-line"></div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="container">
 
-        </div>
-    </footer>
-<script src="/assets/js/main.js"></script>
-<script src="https://unpkg.com/swup@4"></script> 
-<script src="https://unpkg.com/@swup/progress-plugin@3"></script>
-<script src="/assets/js/swiper.js"></script>
-<script>   
-    window.addEventListener('load', function() {
-        mainApp()
-    });
-    const swup = new Swup({   
-        plugins: [
-            new SwupProgressPlugin()
-        ] 
-    });
-    swup.hooks.on('page:view', () => {
-       mainApp()
-    }, { before: true });
+<footer class="pt-5" itemscope itemtype="https://schema.org/Organization" id="kontakt">
+  <section class="footer-cta py-5 border-bottom position-relative">
+    <div class="p-4 p-xs-5">
+      <h2 class="text-center w-100 mb-0 text-white">Zacznijmy współpracę</h2>
+      <p class="mb-0 display-8 text-center w-100 text-white py-3">
+        Nie wiesz od czego zacząć? Zadzwoń, pomogę wybrać optymalne rozwiązanie.
+      </p>
+      <div class="d-grid gap-0 gap-3 justify-content-sm-center py-4">
+        <a href="+48788660190" title="Book call on my calendar" class="btn btn-primary btn-lg ps-4 pe-4 py-2 my-2 d-flex" itemprop="url">+48 788 660 190  
+          <svg class="ms-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="width:18px;" xml:space="preserve">
+            <style type="text/css">
+              .st0{fill:#CFE2FF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#c91717;}
+            </style>
+            <g>
+              <path class="st0" d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"></path>
+              <path class="st1" d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
+                c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"></path>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-5 footer-links">
+    <div class="container">
+      <p class="text-white text-center mb-3" >Kompleksowo wykonam dla Ciebie piekną wysokowydajną stronę internetową <br/>która przekona więcej klientów niż strony Twojej konkurencji</p>
+    </div>
+    <ul class="nav col-md-4 justify-content-center w-100 container" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <li class="nav-item"><p class="text-white mb-0 p-2 muted-50">
+        <img loading="lazy" class="pe-3" src="favicon/favicon.svg" width="35" alt="">© Copyright 2024 <span itemprop="name">Przemek Miros Web Design</span>.</p></li>
+      <li class="nav-item"><a title="Facebook" href="https://www.facebook.com/przemekstronyinternetowe" class="nav-link px-2 text-body-secondary text-white muted-50" itemprop="url">Facebook</a></li>
+      <li class="nav-item"><a title="Github" href="https://github.com/PrzemekMiros" class="nav-link px-2 text-body-secondary text-white muted-50" itemprop="url">Github</a></li>
+      <li class="nav-item"><a title="Behance" href="https://www.behance.net/przemyslaw" class="nav-link px-2 text-body-secondary text-white muted-50" itemprop="url">Behance</a></li>
+    </ul>
+  </div>
+</footer>
+<!--
+<div id="cookieConsent" class="p-4 cookie-banner">
+  <p class="mb-2"><b>Ta strona używa plików cookies</b></p>
+  <p>Używamy plików cookie, aby polepszyć użyteczność strony. <br>Korzystając z naszej witryny, akceptujesz <a href="cookie-policy.html">politykę prywatności</a>.</p>
+  <button id="acceptCookies" class="btn btn-primary btn-lg ps-4 pe-4 py-2  d-flex me-0 me-md-3">Akceptuj</button>
+  <button id="rejectCookies" class="btn btn btn-secondary btn-lg ps-4 pe-4 py-2  d-flex">Odrzuć</button>
+</div>
+-->
+</body>
+<script defer src="assets/js/cookies.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const toggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('#navbarsExample09');
+  
+  // Ensure correct state on load
+  if (!navbarCollapse.classList.contains('show')) {
+    toggler.classList.add('collapsed');
+    toggler.setAttribute('aria-expanded', 'false');
+  }
+});
 </script>
-<script src="/assets/js/cookieconsent.js" defer></script>
-<script type="module" src="/assets/js/cookieconsent-config.js" defer></script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "WebSite",
-    "name": "Przemek Miros Strony Internetowe",
-    "url": "https://przemekmiros.pl/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{search_term_string}",
-      "query-input": "required name=search_term_string"
+  
+  
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toolsSection = document.querySelector('.tools-section');
+  const toolItems = document.querySelectorAll('.tool-item');
+  
+  // Store the hardcoded positions
+  const positions = [
+    { top: '10%', left: '5%' },
+    { top: '20%', left: '30%' },
+    { top: '44%', left: '25%' },
+    { top: '25%', left: '70%' },
+    { top: '24%', left: '85%' },
+    { top: '0%', left: '100%' },
+    { top: '45%', left: '75%' },
+    { top: '63%', left: '85%' },
+    { top: '65%', left: '30%' },
+    { top: '82%', left: '20%' },
+    { top: '80%', left: '100%' },
+    { top: '44%', left: '8%' },
+    { top: '63%', left: '0%' },
+    { top: '63%', left: '70%' }
+  ];
+  
+  function updatePositions() {
+    const rect = toolsSection.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const scrollProgress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+    
+    toolItems.forEach((item, index) => {
+      const startPosition = { top: 50, left: 50 };
+      const endPosition = positions[index];
+
+      const top = startPosition.top + (parseFloat(endPosition.top) - startPosition.top) * scrollProgress;
+      const left = startPosition.left + (parseFloat(endPosition.left) - startPosition.left) * scrollProgress;
+
+      item.style.transform = `translate(-50%, -50%) translate(${left}%, ${top}%)`;
+    });
+
+    if (scrollProgress > 0) {
+      toolsSection.classList.add('visible');
+    } else {
+      toolsSection.classList.remove('visible');
     }
   }
-</script>   
-</body>
+
+  window.addEventListener('scroll', updatePositions);
+  updatePositions(); // Initial call
+});
+
+</script>
+
 </html>
+
+

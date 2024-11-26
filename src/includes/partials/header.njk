@@ -1,205 +1,101 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="Eleventy"/>
-        <title>{{ title }} - {{ meta.siteName }}</title>
-        <meta name="description" content="{{ description }}"> {% set robots = robots | default('index') %}
-        <meta name="robots" content="{{ robots }}">
-        <link rel="icon" type="image/png" href="/assets/img/logo/favicon.png">
 
-        <meta property="og:url" content="https://przemekmiros.pl/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="{{ title }}">
-        <meta property="og:description" content="{{ description }}">
-        <meta property="og:image" content="/assets/img/opengraph.jpg">
-        <meta property="og:site_name" content="Przemek Miros - Strony internetowe" />
-        <meta name="twitter:card" content="summary_large_image">
-        <meta property="twitter:domain" content="przemekmiros.pl">
-        <meta property="twitter:url" content="https://przemekmiros.pl/">
-        <meta name="twitter:title" content="{{ title }}">
-        <meta name="twitter:description" content="{{ description }}">
-        <meta name="twitter:image" content="/assets/img/opengraph.jpg">
-        
-        <style>
-            .preloader {
-                display: block;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                width: 100%;
-                height: 100vh;
-                background: var(--color-light-1);
-                transition: all 0.2s ease-out;
-                overflow: hidden;
-                pointer-events: none;
-                z-index: 10000000;
-            }
+<head>
 
-            .preloader_inner {
-                position: absolute;
-                top: 48%;
-                left: 50%;
-                transform: translateY(-50%) translateX(-50%);
-                z-index: 10000000;
-            }
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            .site-main {
-                opacity: 0;
-                transition: opacity 0.2s ease-out;
-            }
+<!-- SEO Metadata -->
+<meta name="robots" content="index, follow">
+<meta name="description" content="{{ description }}">
+<meta name="author" content="Przemek Miros">
+<meta name="title" content="{{ title }}">
+<title>{{ title }} - {{ meta.siteName }}</title>
 
-            .circle-loader {
-                position: relative;
-                width: auto;
-                height: auto;
-            }
+{% set robots = robots | default('index') %}
+<meta name="robots" content="{{ robots }}">
 
-            .circle-loader div {
-                height: 10px;
-                width: 10px;
-                background-color: var(--color-accent-1);
-                border-radius: 50%;
-                position: absolute;
-                -webkit-animation: 0.8s opaque ease-in-out infinite both;
-                animation: 0.8s opaque ease-in-out infinite both;
-            }
+<!-- Open Graph Metadata -->
+<meta property="og:site_name" content="{{ title }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="index.html">
+<meta property="og:title" content="{{ description }}">
+<meta property="og:image" content="/assets/img/template/avatar.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
 
-            .circle-loader div:nth-child(1) {
-                top: -25px;
-                left: 0;
-            }
+<!-- Twitter Card Metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@yourTwitterHandle">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="/assets/img/template/avatar.png">
 
-            .circle-loader div:nth-child(2) {
-                top: -17px;
-                left: 17px;
-                -webkit-animation-delay: 0.1s;
-                animation-delay: 0.1s;
-            }
+<!-- Link Elements -->
+<link rel="canonical" href="index.html">
+<link rel="shortlink" href="index.html">
+<link rel="image_src" href="/assets/img/template/avatar.png">
+<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+<!-- CSS Links -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
 
-            .circle-loader div:nth-child(3) {
-                top: 0;
-                left: 25px;
-                -webkit-animation-delay: 0.2s;
-                animation-delay: 0.2s;
-            }
+<!-- JS Links -->
+<script defer src="assets/js/bootstrap.bundle.min.js"></script>
+<script defer src="assets/js/animated.js"></script>
 
-            .circle-loader div:nth-child(4) {
-                top: 17px;
-                left: 17px;
-                -webkit-animation-delay: 0.3s;
-                animation-delay: 0.3s;
-            }
+</head>
+<body>
 
-            .circle-loader div:nth-child(5) {
-                top: 25px;
-                left: 0;
-                -webkit-animation-delay: 0.4s;
-                animation-delay: 0.4s;
-            }
-
-            .circle-loader div:nth-child(6) {
-                top: 17px;
-                left: -17px;
-                -webkit-animation-delay: 0.5s;
-                animation-delay: 0.5s;
-            }
-
-            .circle-loader div:nth-child(7) {
-                top: 0;
-                left: -23px;
-                -webkit-animation-delay: 0.6s;
-                animation-delay: 0.6s;
-            }
-
-            .circle-loader div:nth-child(8) {
-                top: -17px;
-                left: -17px;
-                -webkit-animation-delay: 0.7s;
-                animation-delay: 0.7s;
-            }
-
-            @keyframes opaque {
-                0% {
-                    opacity: 0.1;
-                }
-
-                40% {
-                    opacity: 1;
-                }
-
-                80% {
-                    opacity: 0.1;
-                }
-
-                100% {
-                    opacity: 0.1;
-                }
-            }
-        </style>
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
-    </head>
-    <body>
-        <div class="preloader">
-            <div class="preloader_inner">
-                <div class="circle-loader">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-        <header class="site-header">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-5 col-md-2">
-                        <a href="/" class="logo" title="Logo">
-                            <img src="/assets/img/logo/logo-light.png" width="160" height="40" alt="Przemek Miros Logo">
-                        </a>
-                    </div>
-                    <div class="col-3 col-md-8">
-                        <nav class="main-menu d-none d-md-block">
-                            <ul>
-                                <li>
-                                    <a href="#realizacje" title="Realizacje">Realizacje</a>
-                                </li>
-                                <li>
-                                    <a href="#klienci" title="Klienci">Klienci</a>
-                                </li>
-                                <li>
-                                    <a href="#uslugi" title="Usługi">Usługi</a>
-                                </li>
-                                <li>
-                                    <a href="#opinie" title="Opinie">Opinie</a>
-                                </li>
-                                <li>
-                                    <a href="#kontakt" title="Kontakt">Kontakt</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-4 col-md-2 d-flex justify-content-end">
-
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="site-main">
-            <script>
-                var obj = document.querySelector('.preloader'),
-                    page = document.querySelector('.site-main');
-                window.addEventListener("load", function() {
-                    obj.style.opacity = "0";
-                    page.style.opacity = "1";
-                });
-            </script>
-        <main id="swup" class="transition-fade">
+  <header id="mainNav" class="header shadow" itemscope itemtype="https://schema.org/WebSite">
+      <nav class="navbar mt-3 rounded-20 container navbar-expand-lg fixed-top p-2" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <div class="container">
+              <a title="main logo" href="index.html" class="navbar-brand" itemprop="url">
+                  <img width="160" alt="logo" src="assets/img/template/logo-dark.png" itemprop="logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExample09">
+                  <div class="navbar-nav me-auto">
+                      <a title="Usługi" class="nav-link" href="#uslugi">Usługi</a>
+                      <a title="Realizacje" class="nav-link" href="#realizacje">Realizacje</a>
+                      <a title="Opinie" class="nav-link" href="#opinie">Opinie</a>
+                      <a title="Kontakt" class="nav-link" href="#kontakt" >Kontakt</a>
+                  </div>
+                  <div class="d-md-flex d-sm-grid bd-highlight">
+                      <div class="head-available me-0 me-md-3 mb-3 mb-md-0 rounded-10 ps-1 pe-3 py-1 flex-fill bd-highlight d-none d-md-flex">
+                          <div class="head-conteiner">
+                              <img class="rounded-6 me-2" alt="creator image" width="30" src="assets/img/template/avatar.png">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                                  <path d="M5.5 10C7.98528 10 10 7.98528 10 5.5C10 3.01472 7.98528 1 5.5 1C3.01472 1 1 3.01472 1 5.5C1 7.98528 3.01472 10 5.5 10Z" fill="#18B946" stroke="#F0F0F0" stroke-width="2"/>
+                              </svg>
+                          </div>
+                          <span>Dostępny od zaraz</span>
+                      </div>
+                      <a href="tel:+48788660190" title="Lets talk button" class="btn btn-primary btn-sm px-3 py-1 flex-fill bd-highlight d-none d-md-flex" itemprop="url">+48 788 660 190         
+                          <svg class="ms-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="width:18px;" xml:space="preserve">
+                              <style type="text/css">
+                                  .st0{fill:#CFE2FF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#c91717;}
+                              </style>
+                              <g>
+                                  <path class="st0" d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"/>
+                                  <path class="st1" d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
+                                  c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"/>
+                              </g>
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </header>
+  

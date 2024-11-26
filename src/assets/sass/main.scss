@@ -1,16 +1,3 @@
 
-@use 'base/colors.scss';
-@use 'base/typography.scss';
-@use 'base/grid.scss';
-@use 'base/transitions.scss';
-@use 'base/spacings.scss';
-@use 'base/global.scss';
-@use 'base/cookies.scss';
-
-@use 'components/blurimage.scss';
-@use 'components/header.scss';
-@use 'components/swiper.scss';
-@use 'components/button.scss';
-@use 'components/helpers.scss';
-
-@use 'sections/works.scss';
+@use 'base/bootstrap.scss';
+@use 'base/style.scss';
