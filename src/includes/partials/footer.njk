@@ -6,7 +6,7 @@
       <p class="mb-0 display-8 text-center w-100 text-white py-3">
         Nie wiesz od czego zacząć? Zadzwoń, pomogę wybrać optymalne rozwiązanie.
       </p>
-      <div class="d-flex gap-0 gap-3 justify-content-sm-center py-4">
+      <div class="d-md-flex gap-0 gap-3 justify-content-center text-center py-4">
         <a href="tel:+48788660190" title="Zadzwoń do mnie" class="btn btn-primary btn-lg ps-4 pe-4 py-2 my-2 d-flex" itemprop="url">+48 788 660 190  
           <svg class="ms-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="width:18px;" xml:space="preserve">
             <style type="text/css">
@@ -39,12 +39,14 @@
     <div class="container">
       <p class="text-white text-center mb-3" >Kompleksowo wykonam dla Ciebie piekną wysokowydajną stronę internetową <br/>która przekona więcej klientów niż strony Twojej konkurencji</p>
     </div>
-    <ul class="nav col-md-4 justify-content-center w-100 container" itemscope itemtype="https://schema.org/SiteNavigationElement">
-      <li class="nav-item"><p class="text-white mb-0 p-2 muted-50">
-        <img loading="lazy" class="pe-3" src="favicon/favicon.svg" width="35" alt="">© Copyright 2024 <span itemprop="name">Przemek Miros Web Design</span>.</p></li>
+    <ul class="nav col-md-4 justify-content-center w-100 container" itemscope itemtype="https://schema.org/SiteNavigationElement"> 
       <li class="nav-item"><a title="Facebook" href="https://www.facebook.com/przemekstronyinternetowe" class="nav-link px-2 text-body-secondary text-white muted-50" itemprop="url">Facebook</a></li>
       <li class="nav-item"><a title="Github" href="https://github.com/PrzemekMiros" class="nav-link px-2 text-body-secondary text-white muted-50" itemprop="url">Github</a></li>
       <li class="nav-item"><a title="Behance" href="https://www.behance.net/przemyslaw" class="nav-link px-2 text-body-secondary text-white muted-50" itemprop="url">Behance</a></li>
+    </ul>
+    <ul class="nav col-md-4 justify-content-center w-100 container" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <li class="nav-item"><p class="text-white mb-0 p-2 muted-50">
+        <img loading="lazy" class="pe-3" src="/assets/img/favicon/favicon.svg" width="35" alt="">© 2024 <span itemprop="name">Przemek Miros</span>.</p></li>
     </ul>
   </div>
 </footer>
@@ -138,6 +140,33 @@
   
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#customNavbar');
+
+    // Obsługa kliknięcia przycisku navbar-toggler
+    navbarToggler.addEventListener('click', () => {
+        // Przełączanie klasy "collapsed" na przycisku
+        navbarToggler.classList.toggle('collapsed');
+
+        // Przełączanie klasy "show" na menu
+        navbarCollapse.classList.toggle('show');
+    });
+
+    // Zamknięcie menu po kliknięciu w dowolny link
+    const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.classList.remove('collapsed'); // Przywrócenie animacji hamburgera
+            }
+        });
+    });
+});
+
+</script>
 
 
 </html>

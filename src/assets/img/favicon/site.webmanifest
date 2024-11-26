@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Web Design",
+  "short_name": "WebDesign",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
