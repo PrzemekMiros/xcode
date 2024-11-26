@@ -44,71 +44,86 @@
   <button id="rejectCookies" class="btn btn btn-secondary btn-lg ps-4 pe-4 py-2  d-flex">Odrzuć</button>
 </div>
 -->
+</div>
+</div>
 </body>
-<script defer src="assets/js/cookies.js"></script>
+<script src="/assets/js/libs/split-text.js"></script>
+<script src="/assets/js/libs/swiper.js"></script>
+<script src="/assets/js/libs/swup.js"></script>
+<script src="/assets/js/libs/swup-progress.js"></script>
+<script src="/assets/js/libs/swup-body.js"></script>
+<script src="/assets/js/libs/gsap.js"></script>
+<script src="/assets/js/libs/scroll-trigger.js"></script>
+<script src="/assets/js/libs/gsap-flip.js"></script>
+<script src="/assets/js/libs/lenis.js"></script> 
+<script src="/assets/js/animations.js"></script>
+<script src="/assets/js/script.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  const toggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.querySelector('#navbarsExample09');
-  
-  // Ensure correct state on load
-  if (!navbarCollapse.classList.contains('show')) {
-    toggler.classList.add('collapsed');
-    toggler.setAttribute('aria-expanded', 'false');
-  }
-});
-</script>
-  
-  
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toolsSection = document.querySelector('.tools-section');
-  const toolItems = document.querySelectorAll('.tool-item');
-  
-  // Store the hardcoded positions
-  const positions = [
-    { top: '10%', left: '5%' },
-    { top: '20%', left: '30%' },
-    { top: '44%', left: '25%' },
-    { top: '25%', left: '70%' },
-    { top: '24%', left: '85%' },
-    { top: '0%', left: '100%' },
-    { top: '45%', left: '75%' },
-    { top: '63%', left: '85%' },
-    { top: '65%', left: '30%' },
-    { top: '82%', left: '20%' },
-    { top: '80%', left: '100%' },
-    { top: '44%', left: '8%' },
-    { top: '63%', left: '0%' },
-    { top: '63%', left: '70%' }
-  ];
-  
-  function updatePositions() {
-    const rect = toolsSection.getBoundingClientRect();
-    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    const scrollProgress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+  window.addEventListener('load', function() {
+  appMain(); animationMain()
+  });
+  const swup = new Swup({
+    animateHistoryBrowsing: true, 
+    plugins: [
+      new SwupProgressPlugin(),
+      new SwupBodyClassPlugin()
+    ]
+  });
+  swup.hooks.on('page:view', () => {
+       appMain(); animationMain()
+  }, { before: true });
+</script> 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector(".tools-section")) {
+    const toolsSection = document.querySelector('.tools-section');
+    const toolItems = document.querySelectorAll('.tool-item');
     
-    toolItems.forEach((item, index) => {
-      const startPosition = { top: 50, left: 50 };
-      const endPosition = positions[index];
-
-      const top = startPosition.top + (parseFloat(endPosition.top) - startPosition.top) * scrollProgress;
-      const left = startPosition.left + (parseFloat(endPosition.left) - startPosition.left) * scrollProgress;
-
-      item.style.transform = `translate(-50%, -50%) translate(${left}%, ${top}%)`;
-    });
-
-    if (scrollProgress > 0) {
-      toolsSection.classList.add('visible');
-    } else {
-      toolsSection.classList.remove('visible');
+    // Store the hardcoded positions
+    const positions = [
+      { top: '10%', left: '5%' },
+      { top: '20%', left: '30%' },
+      { top: '44%', left: '25%' },
+      { top: '25%', left: '70%' },
+      { top: '24%', left: '85%' },
+      { top: '0%', left: '100%' },
+      { top: '45%', left: '75%' },
+      { top: '63%', left: '85%' },
+      { top: '65%', left: '30%' },
+      { top: '82%', left: '20%' },
+      { top: '80%', left: '100%' },
+      { top: '44%', left: '8%' },
+      { top: '63%', left: '0%' },
+      { top: '63%', left: '70%' }
+    ];
+    
+    function updatePositions() {
+      const rect = toolsSection.getBoundingClientRect();
+      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+      const scrollProgress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+      
+      toolItems.forEach((item, index) => {
+        const startPosition = { top: 50, left: 50 };
+        const endPosition = positions[index];
+  
+        const top = startPosition.top + (parseFloat(endPosition.top) - startPosition.top) * scrollProgress;
+        const left = startPosition.left + (parseFloat(endPosition.left) - startPosition.left) * scrollProgress;
+  
+        item.style.transform = `translate(-50%, -50%) translate(${left}%, ${top}%)`;
+      });
+  
+      if (scrollProgress > 0) {
+        toolsSection.classList.add('visible');
+      } else {
+        toolsSection.classList.remove('visible');
+      }
     }
-  }
-
-  window.addEventListener('scroll', updatePositions);
-  updatePositions(); // Initial call
-});
-
+  
+    window.addEventListener('scroll', updatePositions);
+    updatePositions(); // Initial call
+  };
+  });
+  
 </script>
 
 </html>

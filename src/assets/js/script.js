@@ -156,6 +156,7 @@ function appMain() {
 		greeting.innerHTML = welcomeText;
 	}
   // Header scrolled
+  if (document.querySelector(".site-header")) {
 	(function() {
 		var doc = document.documentElement;
 		var w = window;
@@ -214,6 +215,7 @@ function appMain() {
 		window.addEventListener('scroll', checkScroll);
 
 	})();
+    };
 
 	// Acordion
 	if (document.querySelector(".accordion")) {

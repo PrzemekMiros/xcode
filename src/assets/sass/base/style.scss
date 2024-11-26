@@ -792,15 +792,6 @@ h2 span:after {
 .pixyle-gradient {
   background: linear-gradient(180deg, #0d2d56 0, #000e23 50%, #0d2d56 100%);
 }
-.animated {
-  opacity: 0.5;
-  transform: translateY(80px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-}
-.animated.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 .year-founded:after {
   content: "New!";
   position: absolute;
