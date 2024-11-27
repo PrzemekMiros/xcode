@@ -899,10 +899,15 @@ iframe {
   .latest-projects {
     border-radius: 20px;
   }
-  .clients-testimonials,
   .rounded-top-50 {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+  }
+  .clients-testimonials {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   .border-sm-0 {
     border-radius: 0 !important;

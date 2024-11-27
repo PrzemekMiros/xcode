@@ -399,6 +399,12 @@ iframe {
   flex: 0 0 auto;
   width: 100%;
 }
+.g-2 {
+  --bs-gutter-x: .5rem;
+}
+.g-2 {
+  --bs-gutter-y: .5rem;
+}
 .g-3 {
   --bs-gutter-x: 1rem;
 }
@@ -470,6 +476,14 @@ iframe {
   .row-cols-lg-4 > * {
     flex: 0 0 auto;
     width: 25%;
+  }
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.3333333%;
   }
   .col-lg-12 {
     flex: 0 0 auto;
