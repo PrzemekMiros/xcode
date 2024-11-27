@@ -2,22 +2,16 @@
 <html lang="pl">
 
 <head>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- SEO Metadata -->
 <meta name="robots" content="index, follow">
 <meta name="description" content="{{ description }}">
 <meta name="author" content="Przemek Miros">
 <meta name="title" content="{{ title }}">
 <title>{{ title }} - {{ meta.siteName }}</title>
-
 {% set robots = robots | default('index') %}
 <meta name="robots" content="{{ robots }}">
-
-<!-- Open Graph Metadata -->
 <meta property="og:site_name" content="{{ title }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://przemekmiros.pl/">
@@ -25,15 +19,11 @@
 <meta property="og:image" content="/assets/img/opengraph.jpg">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1024">
-
-<!-- Twitter Card Metadata -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@yourTwitterHandle">
-<meta name="twitter:title" content="">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="/assets/img/template/avatar.png">
-
-<!-- Link Elements -->
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="/assets/img/opengraph.jpg">
 <link rel="canonical" href="https://przemekmiros.pl/">
 <link rel="shortlink" href="https://przemekmiros.pl/">
 <link rel="image_src" href="/assets/img/template/avatar.png">
@@ -42,7 +32,6 @@
 <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
 <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
-<!-- CSS Links -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
 <style>
     .preloader {
@@ -150,7 +139,7 @@
         opacity: 0.1;
       }
     }
-  </style>
+</style>
 </head>
 <body>
     <div class="h-100h">
@@ -168,16 +157,15 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
     <div class="scrollContainer" id="pinSection">
         <script>
           var obj = document.querySelector('.preloader'),
             page = document.querySelector('.scrollContainer');
-  
-          window.addEventListener("load", function () {
+            window.addEventListener("load", function () {
             obj.style.opacity = "0";
             page.style.opacity = "1";
-          });
+            });
         </script>
   <header id="mainNav" class="header shadow" itemscope itemtype="https://schema.org/WebSite">
       <nav class="navbar mt-3 rounded-20 container navbar-expand-lg fixed-top p-2" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">

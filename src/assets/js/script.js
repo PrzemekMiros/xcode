@@ -58,67 +58,6 @@ if (document.querySelector(".blur-load")) {
 		else welcomeText = welcomeTypes[1];
 		greeting.innerHTML = welcomeText;
 	}
-  // Header scrolled
-  if (document.querySelector(".site-header")) {
-	(function() {
-		var doc = document.documentElement;
-		var w = window;
-		var curScroll;
-		var prevScroll = w.scrollY || doc.scrollTop;
-		var curDirection = 0;
-		var prevDirection = 0;
-		var body = document.querySelector('body');
-		var header = document.querySelector('.site-header');
-		var toggled;
-		var threshold = 20;
-
-		var checkScroll = function() {
-			curScroll = w.scrollY || doc.scrollTop;
-			if (curScroll > prevScroll) {
-				// scrolled down
-				curDirection = 2;
-			} else {
-				// scrolled up
-				curDirection = 1;
-			}
-
-			if (curDirection !== prevDirection) {
-				toggled = toggleHeader();
-			}
-
-			// Add or remove 'scrolled' class based on scroll position
-			if (curScroll > 150) {
-				header.classList.add('scrolled');
-			} else {
-				header.classList.remove('scrolled');
-			}
-
-			prevScroll = curScroll;
-			if (toggled) {
-				prevDirection = curDirection;
-			}
-		};
-
-		var toggleHeader = function() {
-			toggled = true;
-			if (curDirection === 2 && curScroll > threshold) {
-				header.classList.add('hide');
-				body.classList.add('sticky-up');
-        body.classList.remove('sticky-down');
-			} else if (curDirection === 1) {
-				header.classList.remove('hide');
-				body.classList.remove('sticky-up');
-        body.classList.add('sticky-down');
-			} else {
-				toggled = false;
-			}
-			return toggled;
-		};
-
-		window.addEventListener('scroll', checkScroll);
-
-	})();
-    };
 
 	// Acordion
 	if (document.querySelector(".accordion")) {
@@ -138,11 +77,24 @@ if (document.querySelector(".blur-load")) {
 			});
 	};
 
+  // Navbar
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#customNavbar');
 
+    navbarToggler.addEventListener('click', () => {
+        navbarToggler.classList.toggle('collapsed');
+        navbarCollapse.classList.toggle('show');
+    });
 
-
-  
-
+    const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+                navbarToggler.classList.remove('collapsed'); // Przywrócenie animacji hamburgera
+            }
+        });
+    });
 
 
 // End

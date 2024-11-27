@@ -553,7 +553,6 @@ h2 span:after {
   left: 50%;
   right: 50%;
   top: 50%;
-  opacity: 0;
 }
 .about-company,
 .about-me,
@@ -645,6 +644,12 @@ h2 span:after {
   left: 4%;
   right: auto;
 }
+
+.tool-item:nth-child(9),
+.tool-item:nth-child(14) {
+    opacity: 0!important
+  }
+
 .clients-testimonials {
   position: relative;
   background-color: #f7f7f7;
@@ -871,8 +876,7 @@ iframe {
     display: grid !important;
   }
   .logo-bridge {
-    width: 255px;
-    top: 1px;
+    display: none;
   }
   .case-details,
   .faq,

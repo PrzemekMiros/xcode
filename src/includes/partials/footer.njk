@@ -61,9 +61,6 @@
 </div>
 </div>
 </body>
-<!---
-<script src="/assets/js/libs/swiper.js"></script>
--->
 <script src="/assets/js/libs/split-text.js"></script>
 <script src="/assets/js/libs/swup.js"></script>
 <script src="/assets/js/libs/swup-progress.js"></script>
@@ -89,35 +86,6 @@
        appMain(); animationMain()
   }, { before: true });
 </script> 
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('#customNavbar');
-
-    // Obsługa kliknięcia przycisku navbar-toggler
-    navbarToggler.addEventListener('click', () => {
-        // Przełączanie klasy "collapsed" na przycisku
-        navbarToggler.classList.toggle('collapsed');
-
-        // Przełączanie klasy "show" na menu
-        navbarCollapse.classList.toggle('show');
-    });
-
-    // Zamknięcie menu po kliknięciu w dowolny link
-    const navLinks = navbarCollapse.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-                navbarToggler.classList.remove('collapsed'); // Przywrócenie animacji hamburgera
-            }
-        });
-    });
-});
-
-</script>
-
 
 </html>
 
