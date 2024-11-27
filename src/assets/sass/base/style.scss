@@ -20,6 +20,9 @@ nav {
 .year-founded {
   position: relative;
 }
+figure {
+  margin: 0;
+}
 @font-face {
   font-family: "Square Peg";
   src: url("/assets/fonts/SquarePeg-Regular.ttf");
@@ -514,6 +517,9 @@ h2 span:after {
   border-radius: 40px;
   background: #f7f7f7;
 }
+.latest-projects img {
+  border-radius: 10px;
+}
 .radius-10 {
   border-radius: 10px;
 }
@@ -630,7 +636,7 @@ h2 span:after {
   right: auto;
 }
 .tools-section .tool-item:nth-child(15) {
-  top: 63%;
+  top: 56%;
   left: 6%;
   right: auto;
 }
@@ -640,7 +646,7 @@ h2 span:after {
   left: auto;
 }
 .tools-section .tool-item:nth-child(17) {
-  top: 30%;
+  top: 35%;
   left: 4%;
   right: auto;
 }
@@ -655,6 +661,9 @@ h2 span:after {
   background-color: #f7f7f7;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
 }
 .clients-testimonials:after,
 .pricing:after {
@@ -726,7 +735,7 @@ h2 span:after {
   animation: 100s linear infinite scroll;
 }
 .slider img {
-  width: 400px;
+  width: 360px;
   margin: 0 10px;
   border-radius: 10px;
 }
