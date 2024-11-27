@@ -644,12 +644,12 @@ h2 span:after {
   left: 4%;
   right: auto;
 }
-
-.tool-item:nth-child(9),
-.tool-item:nth-child(14) {
+@media(max-width:768px) {
+  .tools-section .tool-item:nth-child(9),
+  .tools-section .tool-item:nth-child(14) {
     opacity: 0!important
   }
-
+}
 .clients-testimonials {
   position: relative;
   background-color: #f7f7f7;
