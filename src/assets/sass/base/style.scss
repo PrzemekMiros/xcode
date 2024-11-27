@@ -391,6 +391,8 @@ h2 span:after {
   display: flex;
 }
 .navbar-brand img {
+  width: 160px;
+  height: auto;
   transition: transform 0.3s;
 }
 .navbar-brand img:hover {
