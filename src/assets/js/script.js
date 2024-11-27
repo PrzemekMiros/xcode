@@ -12,138 +12,41 @@ function appMain() {
 		}
 	});
 
-  // Lazy blur images
-  if (document.querySelector(".blur-load")) {
-	const blurImgWrap = document.querySelectorAll(".blur-load");
+// Lazy blur images
+if (document.querySelector(".blur-load")) {
+    const blurImgWrap = document.querySelectorAll(".blur-load");
 
-	const observer = new IntersectionObserver((entries, observer) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				const item = entry.target;
-				const img = item.querySelector("picture img");
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const item = entry.target;
+                const img = item.querySelector("picture img");
 
-				function loaded() {
-					item.classList.add("loaded");
-				}
+                function loaded() {
+                    item.classList.add("loaded");
+                }
 
-				if (img.complete) {
-					loaded();
-				} else {
-					img.addEventListener("load", loaded);
-				}
+                if (img.complete) {
+                    loaded();
+                } else {
+                    img.addEventListener("load", loaded);
+                }
 
-				// Przestań obserwować element po jego załadowaniu
-				observer.unobserve(item);
-			}
-		});
-	}, {
-		root: null, // Domyślnie okno przeglądarki
-		threshold: 0.1 // Obraz wczytywany, gdy co najmniej 10% elementu jest w widoku
-	});
+                // Przestań obserwować element po jego załadowaniu
+                observer.unobserve(item);
+            }
+        });
+    }, {
+        root: null, // Domyślnie okno przeglądarki
+        rootMargin: "300px", // Rozpocznij ładowanie, gdy element jest 200px poza widokiem
+        threshold: 0 // Brak minimalnego procentu widoczności
+    });
 
-	blurImgWrap.forEach((item) => {
-		observer.observe(item);
-	});
+    blurImgWrap.forEach((item) => {
+        observer.observe(item);
+    });
 };
 
-	if (document.querySelector('.swiper-opinion')) {
-		var swiper = new Swiper(".swiper-opinion", {
-			grabCursor: true,
-			slidesPerView: 1,
-			spaceBetween: 15,
-			lazyPreloadPrevNext: 1,
-			centeredSlides: false,
-			loop: true,
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true
-			},
-			scrollbar: {
-				el: '.swiper-scrollbar',
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			autoplay: {
-				delay: 5000,
-			},
-			keyboard: {
-				enabled: true
-			},
-			mousewheel: false,
-			breakpoints: {
-				460: {
-					slidesPerView: 1.25
-				},
-				768: {
-					slidesPerView: 1.8
-				},
-				991: {
-					slidesPerView: 2
-				},
-				1024: {
-					slidesPerView: 2
-				},
-				1200: {
-					slidesPerView: 2
-				}
-			}
-		});
-	};
-
-	if (document.querySelector('.swiper-works')) {
-		var swiper = new Swiper(".swiper-works", {
-			grabCursor: true,
-			slidesPerView: 1,
-			spaceBetween: 15,
-			centeredSlides: false,
-			loop: true,
-			lazy: {
-				loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
-				loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
-			},
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true
-			},
-			scrollbar: {
-				el: '.swiper-scrollbar',
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			autoplay: {
-				delay: 4000,
-			},
-			keyboard: {
-				enabled: true
-			},
-			mousewheel: false,
-		});
-	};
-
-
-	if (document.querySelector('.works-grid-item')) {
-		var worksGridItems = document.querySelectorAll('.works-grid-item');
-		worksGridItems.forEach(function(item) {
-			item.addEventListener('mouseenter', function(event) {
-				worksGridItems.forEach(function(innerItem) {
-					if (innerItem !== item) {
-						innerItem.classList.add('works-grid-item-effect');
-					}
-				});
-			});
-			item.addEventListener('mouseleave', function(event) {
-				worksGridItems.forEach(function(innerItem) {
-					if (innerItem !== item) {
-						innerItem.classList.remove('works-grid-item-effect');
-					}
-				});
-			});
-		});
-	}
 
 	// Greeting
 	if (document.querySelector("#greeting")) {

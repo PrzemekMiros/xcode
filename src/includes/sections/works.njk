@@ -4,12 +4,13 @@
       <h2 class="text-center w-100 mb-5" itemprop="headline">Wybrane realizacje</h2>
       <div class="container pb-2">
   
-        <a href="https://businesswomanlife.pl/" target="_blank">
+        {% for post in collections.works.slice(0, 5) %}
+        <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
           <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation">
               <!-- Text Column -->
                       <div class="col mt-0 d-flex p-3 flex-column" itemscope="" itemtype="http://schema.org/Service">
                         <div class="flex-grow-1">
-                          <h3 class="card-title h4">Portal kobiet biznesu</h3>
+                          <h3 class="card-title h4">{{ post.data.title }}</h3>
                         </div>
                         <!-- KEY FEATURES at the bottom -->
                         <div class="mt-auto">
@@ -24,149 +25,14 @@
             <!-- Image Column -->
             <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
               <div class="h-100 rounded-corners-20">
-                <img src="assets/img/portfolio/moc-business.jpg" loading="lazy" class="w-100 rounded-10" alt="Tech app">
+                {% workImage "src/" + post.data.thumbnail, post.data.title, "class" %}
               </div>
             </div>
           
           </div>
         </a>
-        
-        <a href="https://cse-dentalprogress.pl/" target="_blank">
-        <div class="row row-cols-1 mb-5 mt-5 row-cols-lg-2 g-4 py-3 card-style align-items-stretch card-animation">
-          <!-- Text Column -->
-          <div class="col mt-0 d-flex p-4 ps-4 flex-column" itemscope="" itemtype="http://schema.org/Service">
-            <div class="flex-grow-1">
-              <h3 class="card-title h4">Gabinety stomatologiczne </h3>
-            </div>
-            <!-- KEY FEATURES at the bottom -->
-            <div class="mt-auto">
-              <p class="mb-1 muted-50 display-10">ELEMENTY:</p>
-              <ul class="ps-0 mb-0">
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Projekt</li>
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Kodowanie</li>
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Optymalizacja</li>
-              </ul>
-            </div>
-          </div>
-  
-          <!-- Image Column -->
-          <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
-            <div class="h-100 rounded-corners-20">
-              <img src="assets/img/portfolio/moc-cse.jpg" loading="lazy" class="w-100 rounded-10" alt="Tech app">
-            </div>
-          </div>
-        </div>
-        </a>
-  
-        <a href="https://naildesign.com.pl/" target="_blank">
-        <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation">
-        
-          <!-- Text Column -->
-          <div class="col mt-0 d-flex p-3 flex-column" itemscope="" itemtype="http://schema.org/Service">
-            <div class="flex-grow-1">
-              <h3 class="card-title h4">Zaawansowane techniki Nail Art</h3>
-            </div>
-            <!-- KEY FEATURES at the bottom -->
-            <div class="mt-auto">
-              <p class="mb-1 muted-50 display-10">ELEMENTY:</p>
-              <ul class="ps-0 mb-0">
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Projekt</li>
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Kodowanie</li>
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Optymalizacja</li>
-              </ul>
-            </div>
-          </div>
-                  <!-- Image Column -->
-                  <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
-                    <div class="h-100 rounded-corners-20">
-                      <img src="assets/img/portfolio/moc-nails.jpg" loading="lazy" class="w-100 rounded-10" alt="Tech app">
-                    </div>
-                  </div>
-                  
-        </div>
-        </a>
-  
-        <a href="https://ecotechgroup.pl/" target="_blank">
-        <div class="row row-cols-1 mb-5 mt-5 row-cols-lg-2 g-4 py-3 card-style align-items-stretch card-animation">
-          <!-- Text Column -->
-          <div class="col mt-0 d-flex p-4 ps-4 flex-column" itemscope="" itemtype="http://schema.org/Service">
-            <div class="flex-grow-1">
-              <h3 class="card-title h4">Dystrybutor rur stalowych</h3>
-            </div>
-            <!-- KEY FEATURES at the bottom -->
-            <div class="mt-auto">
-              <p class="mb-1 muted-50 display-10">ELEMENTY:</p>
-              <ul class="ps-0 mb-0">
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Projekt</li>
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Kodowanie</li>
-                <li class="badge badge-pill mb-1" itemprop="serviceType">Optymalizacja</li>
-              </ul>
-            </div>
-          </div>
-  
-          <!-- Image Column -->
-          <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
-            <div class="h-100 rounded-corners-20">
-              <img src="assets/img/portfolio/moc-ecotech.jpg" loading="lazy" class="w-100 rounded-10" alt="Tech app">
-            </div>
-          </div>
-        </div>
-        </a>
+        {% endfor %}
 
-        <a href="https://ideal-lift.pl/" target="_blank">
-          <div class="row row-cols-1 mb-5 mt-5 row-cols-lg-2 g-4 py-3 card-style align-items-stretch card-animation">
-            <!-- Text Column -->
-            <div class="col mt-0 d-flex p-4 ps-4 flex-column" itemscope="" itemtype="http://schema.org/Service">
-              <div class="flex-grow-1">
-                <h3 class="card-title h4">Podnośniki warsztatowe</h3>
-              </div>
-              <!-- KEY FEATURES at the bottom -->
-              <div class="mt-auto">
-                <p class="mb-1 muted-50 display-10">ELEMENTY:</p>
-                <ul class="ps-0 mb-0">
-                  <li class="badge badge-pill mb-1" itemprop="serviceType">Projekt</li>
-                  <li class="badge badge-pill mb-1" itemprop="serviceType">Kodowanie</li>
-                  <li class="badge badge-pill mb-1" itemprop="serviceType">Optymalizacja</li>
-                </ul>
-              </div>
-            </div>
-    
-            <!-- Image Column -->
-            <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
-              <div class="h-100 rounded-corners-20">
-                <img src="assets/img/portfolio/moc-lift.jpg" loading="lazy" class="w-100 rounded-10" alt="Tech app">
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <a href="https://imprezowe-namioty.pl/" target="_blank">
-          <div class="row row-cols-1 mb-5 mt-5 row-cols-lg-2 g-4 py-3 card-style align-items-stretch card-animation">
-            <!-- Text Column -->
-            <div class="col mt-0 d-flex p-4 ps-4 flex-column" itemscope="" itemtype="http://schema.org/Service">
-              <div class="flex-grow-1">
-                <h3 class="card-title h4">Wypożyczalnia namiotów</h3>
-              </div>
-              <!-- KEY FEATURES at the bottom -->
-              <div class="mt-auto">
-                <p class="mb-1 muted-50 display-10">ELEMENTY:</p>
-                <ul class="ps-0 mb-0">
-                  <li class="badge badge-pill mb-1" itemprop="serviceType">Projekt</li>
-                  <li class="badge badge-pill mb-1" itemprop="serviceType">Kodowanie</li>
-                  <li class="badge badge-pill mb-1" itemprop="serviceType">Optymalizacja</li>
-                </ul>
-              </div>
-            </div>
-    
-            <!-- Image Column -->
-            <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
-              <div class="h-100 rounded-corners-20">
-                <img src="assets/img/portfolio/moc-namioty.jpg" loading="lazy" class="w-100 rounded-10" alt="Tech app">
-              </div>
-            </div>
-          </div>
-        </a>
-  
       </div>
     </div>
   </section>
