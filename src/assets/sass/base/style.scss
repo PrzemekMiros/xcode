@@ -733,8 +733,8 @@ h2 span:after {
 }
 .slider {
   display: flex;
-  width: calc(2 * 100%);
-  animation: 100s linear infinite scroll;
+  width: 144%;
+  animation: 80s linear infinite scroll;
 }
 .slider img {
   width: 360px;
@@ -750,7 +750,7 @@ h2 span:after {
   }
 }
 .portfolio-slider.reverse .slider {
-  animation: 100s linear infinite scroll-reverse;
+  animation: 80s linear infinite scroll-reverse;
 }
 @keyframes scroll-reverse {
   0% {
