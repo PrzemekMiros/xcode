@@ -96,6 +96,39 @@ if (document.querySelector(".blur-load")) {
         });
     });
 
+    // Form send
+	function handleSubmit(formId, redirectUrl) {
+		var form = document.getElementById(formId);
+
+		if (form) {
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
+
+				var formData = new FormData(form);
+				var xhr = new XMLHttpRequest();
+
+				xhr.open('POST', 'https://www.futurewebstudio.pl/form/forms/' + formId + '.php');
+
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState === XMLHttpRequest.DONE) {
+						if (xhr.status === 200) {
+							var res = JSON.parse(xhr.responseText);
+							if (res.status === 1) {
+								form.reset();
+								window.location.href = redirectUrl; // Przekieruj po pomyślnym wysłaniu formularza
+							}
+						}
+					}
+				};
+
+				xhr.send(formData);
+			});
+		}
+	}
+	handleSubmit('briefForm', '/wyslano-formularz');
+	handleSubmit('contactForm', '/wyslano-formularz');
+
+
 
 // End
 };

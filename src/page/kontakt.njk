@@ -2,3 +2,21 @@
 title: Kontakt
 description: Skontaktuj się ze mną telefonicznie, mailowo lub poprzez formularz kontaktowy. Chętnie podpowiem i pomogę wybrać optymalne rozwiązanie.
 ---
+
+{% include "sections/form.njk" %}
+
+<style>
+    input,
+    textarea {
+        padding: 1em;
+        width: 100%;
+        background: transparent;
+        border: 1px solid #999;
+        border-radius: 25px;
+        color: #fff;    
+    }
+    input::placeholder,
+    textarea::placeholder {
+        color: #ddd;    
+    }
+</style>
