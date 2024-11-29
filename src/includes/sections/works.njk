@@ -3,17 +3,14 @@
       <p class="accent-text text-center mb-0" itemprop="description">Zobacz</p>
       <h2 class="text-center w-100 mb-5" itemprop="headline">Wybrane realizacje</h2>
       <div class="container pb-2">
-  
-        {% for post in collections.works.slice(0, 9) %}
+        {% for post in collections.works.slice(0, 11) %}
         <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
           <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation">
-              <!-- Text Column -->
                       <div class="col mt-0 d-flex p-3 flex-column" itemscope="" itemtype="http://schema.org/Service">
                         <div class="flex-grow-1">
                           <p class="h6 mb-2">{{ post.data.client }}</p>
                           <h3 class="card-title h4">{{ post.data.title }}</h3>
                         </div>
-                        <!-- KEY FEATURES at the bottom -->
                         <div class="mt-auto">
                           <p class="my-2 muted-50 display-10">ELEMENTY:</p>
                           <ul class="ps-0 mb-0">
@@ -23,17 +20,14 @@
                           </ul>
                         </div>
                       </div>
-            <!-- Image Column -->
             <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
               <div class="h-100 rounded-corners-20">
                 {% workImage "src/" + post.data.thumbnail, post.data.title, "class" %}
               </div>
             </div>
-          
           </div>
         </a>
         {% endfor %}
-
       </div>
     </div>
   </section>
