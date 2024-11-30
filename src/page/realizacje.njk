@@ -1,12 +1,12 @@
 ---
 layout: layouts/page.njk
-uptitle: Wybrane
+uptitle: Zobacz
 title: Realizacje
 description: Zobacz wybrane realizacje stron, sklepów i portali internetowych które wykonałem.
 ---
 
 
-<section class="pricing position-relative round-bottom-20" itemscope itemtype="http://schema.org/CreativeWork">
+<section class="pricing position-relative" itemscope itemtype="http://schema.org/CreativeWork">
     <div class="container-lg pb-4 py-5 w-60">
         {% for post in collections.works %}
         <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
