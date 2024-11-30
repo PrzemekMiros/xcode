@@ -248,12 +248,16 @@ nav {
   right: 3px;
 }
 .header-hero {
+  width: 100%;
   border-radius: 573px;
   background: radial-gradient(
     50% 50% at 50% 50%,
     #fff 70%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+.header-hero img {
+  border-radius: 25px;
 }
 .btn:hover,
 .card-animation:hover {
@@ -918,4 +922,12 @@ iframe {
   .border-sm-0 {
     border-radius: 0 !important;
   }
+}
+
+.bg-light {
+  background: #f7f7f7
+}
+
+.split-lines .line-parent {
+  overflow: hidden;
 }
