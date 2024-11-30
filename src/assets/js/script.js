@@ -15,31 +15,26 @@ function appMain() {
 // Lazy blur images
 if (document.querySelector(".blur-load")) {
     const blurImgWrap = document.querySelectorAll(".blur-load");
-
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const item = entry.target;
                 const img = item.querySelector("picture img");
-
                 function loaded() {
                     item.classList.add("loaded");
                 }
-
                 if (img.complete) {
                     loaded();
                 } else {
                     img.addEventListener("load", loaded);
                 }
-
-                // Przestań obserwować element po jego załadowaniu
                 observer.unobserve(item);
             }
         });
     }, {
-        root: null, // Domyślnie okno przeglądarki
-        rootMargin: "300px", // Rozpocznij ładowanie, gdy element jest 200px poza widokiem
-        threshold: 0 // Brak minimalnego procentu widoczności
+        root: null, 
+        rootMargin: "500px", 
+        threshold: 0 
     });
 
     blurImgWrap.forEach((item) => {
