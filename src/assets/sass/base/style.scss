@@ -950,13 +950,18 @@ nav {
   height: 100%;
 }
 .modal-container {
+  position: relative;
+  padding: 1em;
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
   background: #fff;
-  position: relative;
-  padding: 1em;
+  overflow: scroll;
+}
+.modal-wrap {
+  width: 100%;
+  height: 100%;
 }
 .modal-close {
   position: absolute;
@@ -973,7 +978,6 @@ nav {
 
 .modal iframe {
   width: 100%;
-  height: 100%;
   border-radius: 10px;
 }
 
