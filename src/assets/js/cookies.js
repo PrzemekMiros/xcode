@@ -24,11 +24,20 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function enableCookies() {
-    // Code to enable cookies or analytics
-    console.log("Cookies enabled.");
+    // Dynamically load Hotjar script
+    (function(h, o, t, j, a, r) {
+        h.hj = h.hj || function() { (h.hj.q = h.hj.q || []).push(arguments); };
+        h._hjSettings = { hjid: 3601699, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+    console.log("Cookies enabled and Hotjar loaded.");
 }
 
 function disableCookies() {
-    // Code to disable cookies or analytics
-    console.log("Cookies disabled.");
+    console.log("Cookies disabled. Analytics not loaded.");
 }
