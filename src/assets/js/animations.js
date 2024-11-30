@@ -204,6 +204,7 @@ scrollImg.forEach((scrollImgItem) => {
 
      // Scroll progress
      if (window.matchMedia("(min-width: 767px)").matches) {
+     if (document.querySelector("#menuToggle")) {
       gsap.to(".scrollprogress", {
        height: "100vh",
        ease: 'none',
@@ -216,6 +217,7 @@ scrollImg.forEach((scrollImgItem) => {
        }
      });
      };
+    };
     };
 
 

@@ -41,9 +41,9 @@ function enableCookies() {
         a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 
-    console.log("Cookies enabled and Hotjar loaded.");
+    console.log("Ciasteczka włączone. Hotjar załadowany");
 }
 
 function disableCookies() {
-    console.log("Cookies disabled. Analytics not loaded.");
+    console.log("Ciasteczka wyłączone");
 }
