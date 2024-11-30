@@ -3,9 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const acceptCookies = document.getElementById('acceptCookies');
     const rejectCookies = document.getElementById('rejectCookies');
     
-    // Show the banner if no consent is stored
-    if (!localStorage.getItem('cookiesAccepted')) {
-        cookieConsent.style.display = 'block';
+    // Check consent status on page load
+    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    if (cookiesAccepted === 'true') {
+        cookieConsent.style.display = 'none';
+        enableCookies(); // Ensure cookies are enabled if previously accepted
+    } else if (cookiesAccepted === 'false') {
+        cookieConsent.style.display = 'none'; // Hide banner if cookies were rejected
+    } else {
+        cookieConsent.style.display = 'block'; // Show banner if no consent is stored
     }
 
     // Handle acceptance
