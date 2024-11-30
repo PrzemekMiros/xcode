@@ -985,7 +985,7 @@ nav {
     height: auto;
   }
   .modal iframe {
-    width: 75vw;
-    height: 75vh;
+    min-width: 1110px;
+    min-height: 670px;
   }
 }
