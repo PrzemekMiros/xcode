@@ -1,9 +1,9 @@
 <section id="realizacje" class="latest-projects position-relative" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="container-lg pb-3 pt-5 py-5  w-60">
+    <div class="container-lg pb-3 pt-5 py-5 w-60">
       <p class="accent-text text-center mb-0" itemprop="description">Zobacz</p>
       <h2 class="text-center w-100 mb-5" itemprop="headline">Wybrane realizacje</h2>
       <div class="container pb-2">
-        {% for post in collections.works.slice(0, 11) %}
+        {% for post in collections.works.slice(0, 3) %}
         <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
           <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation">
                       <div class="col mt-0 d-flex p-3 flex-column" itemscope="" itemtype="http://schema.org/Service">
