@@ -132,7 +132,7 @@ if (document.querySelector(".blur-load")) {
 			  <div class="modal-bg modal-exit"></div>
 			  <div class="modal-container shadow">
 			   <div class="modal-wrap">
-				<iframe src="https://cal.com/przemys%C5%82aw-miros/niezobowiazujaca-rozmowa" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+				<iframe src="https://cal.com/przemys%C5%82aw-miros/niezobowiazujaca-rozmowa" style="border-width:0" width="100%" frameborder="0"></iframe>
 				<span class="modal-close modal-exit">X</span>
 			   </div>
 			  </div>

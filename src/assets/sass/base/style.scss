@@ -947,13 +947,12 @@ nav {
 }
 .modal-container {
   position: relative;
-  padding: 1em;
+  padding: .5em;
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
   background: #fff;
-  overflow: scroll;
 }
 .modal-wrap {
   width: 100%;
@@ -974,6 +973,7 @@ nav {
 
 .modal iframe {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
