@@ -358,7 +358,7 @@ iframe {
 @media (min-width: 1400px) {
   .container,
   .container-lg {
-    max-width: 1320px;
+    max-width: 1240px;
   }
 }
 :root {
@@ -458,6 +458,10 @@ iframe {
   .col-md-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
+  }
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 75%;
   }
 }
 @media (min-width: 992px) {
