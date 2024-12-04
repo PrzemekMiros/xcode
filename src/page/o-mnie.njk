@@ -1,4 +1,148 @@
 ---
+layout: layouts/base.njk
+uptitle: Kilka słów
 title: O mnie
 description: Skontaktuj się ze mną telefonicznie, mailowo lub poprzez formularz kontaktowy. Chętnie podpowiem i pomogę wybrać optymalne rozwiązanie.
 ---
+
+<section class="container" itemscope itemtype="http://schema.org/Service">
+  <div class="container pt-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col mt-5">
+        <h2 class="w-100 text-white" itemprop="name">Wartości</h2>
+      </div>
+     </div>
+  </div>
+  <meta itemprop="name" content="Przemek Miros - Usługi">
+  <div class="container-lg pt-0 animated">
+      <div class="row row-cols-1 row-cols-lg-3">
+          <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+            <img loading="lazy" class="mb-3" width="36" alt="Icon learning" src="/assets/img/template/ic-learn.svg">
+              <h4 class="card-title pb-2 fw-normal text-white" itemprop="serviceType">Podnoszenie<br class="d-md-block d-none">umiejętności</h4>
+              <p class="card-text text-white muted-50" itemprop="description">Stale podnoszę swoje umiejętności<br class="d-md-block d-none">i śledzę najnowsze trendy</p>
+          </div>
+          <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+            <img loading="lazy" class="mb-3" width="36" alt="Icon learning" src="/assets/img/template/ic-client-based.svg">
+              <h4 class="card-title pb-2 fw-normal text-white" itemprop="serviceType">Koncentracja<br class="d-md-block d-none">na kliencie</h4>
+              <p class="card-text text-white muted-50" itemprop="description">Słuchanie potrzeb klienta i dostarczanie <br class="d-md-block d-none">efektów zgodnych z oczekiwaniami</p>
+          </div>
+          <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+            <img loading="lazy" class="mb-3" width="36" alt="Icon learning" src="/assets/img/template/ic-target.svg">
+              <h4 class="card-title pb-2 fw-normal text-white" itemprop="serviceType">Innowacja <br class="d-md-block d-none">i kreatywność</h4>
+              <p class="card-text text-white muted-50" itemprop="description">Skupienie się na innowacyjności<br class="d-md-block d-none">i kreatywności w każdym projekcie</p>
+          </div>
+      </div>
+  </div>
+  <div class="container-lg pb-5 animated">
+      <div class="row row-cols-1 row-cols-lg-3 pb-5">
+          <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+            <img loading="lazy" class="mb-3" width="36" alt="Icon learning" src="/assets/img/template/ic-quality.svg">
+              <h4 class="card-title pb-2 fw-normal text-white" itemprop="serviceType">Przywiązanie <br class="d-md-block d-none">do jakości</h4>
+              <p class="card-text text-white muted-50" itemprop="description">Delivering high-quality designs that<br class="d-md-block d-none"> exceed expectations and stand the test of time. </p>
+          </div>
+          <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+            <img loading="lazy" class="mb-3" width="36" alt="Icon learning" src="/assets/img/template/ic-collaboration.svg">
+              <h4 class="card-title pb-2 fw-normal text-white" itemprop="serviceType">Collaboration for<br class="d-md-block d-none"> Success </h4>
+              <p class="card-text text-white muted-50" itemprop="description">Working closely with clients to ensure their<br class="d-md-block d-none">  goals are met through a collaborative process.</p>
+          </div>
+          <div class="col pt-5" itemscope itemtype="http://schema.org/Service">
+            <img loading="lazy" class="mb-3" width="36" alt="Icon learning" src="/assets/img/template/ic-integrity.svg">
+              <h4 class="card-title pb-2 fw-normal text-white" itemprop="serviceType">Integrity in<br class="d-md-block d-none"> Design</h4>
+              <p class="card-text text-white muted-50" itemprop="description">Maintaining honesty and transparency in all<br class="d-md-block d-none"> aspects of our work, ensuring trust and satisfaction.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="about-company position-relative py-5 rounded-top-50" itemscope itemtype="http://schema.org/Organization">
+  <div class="container py-5 animated">
+    <div class="row row-cols-1 row-cols-md-2 g-4 p-4">
+      <div class="col m-0">
+        <h2 class="mt-3 w-100" itemprop="name">Czym się zajmuje</h2>
+      </div>
+      <div class="col">
+        <p class="w-100" itemprop="description">
+          Pomogłem zrealizować cele biznesowe kilkudziesięciu firmom. Zawsze jestem dostępny, aby pomóc, wprowadzić aktualizacje lub rozwiązać problemy. Oferuję konkurencyjne ceny bez kompromisów co do jakości.
+        </p>
+        <p class="w-100" itemprop="description">
+         Rozmawiam, planuje, szkicuje, tropie nowinki techniczne, depcze po piętach  najnowszym trendom. Dbam o aspekty wizualne i techniczne, nie używam kreatorów witryn typuElementor.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aboutMe" class="about-me" itemscope itemtype="http://schema.org/Person">
+  <div class="about-me container card-style p-4 animated">
+    <div class="row align-items-start">
+      <div class="col-12 col-md-6">
+        <img loading="lazy" class="w-100 p-0 rounded-10" src="/assets/img/template/bwl.jpg" alt="Dejan Veljanoski, Founder of UI Forge" itemprop="image">
+      </div>
+
+      <div class="col-12 col-md-6">
+        <span class="accent-text mb-0">Poznajmy się</span>
+        <h2 class="py-2 fs-1" itemprop="name"><span id="greeting"></span> 🖖</h2>
+        <p class="pb-2" itemprop="description">
+          Nazywam się przemek Miros. Od 8 lat tworzę strony i sklepy internetowe.
+          Przez ten czas zdążyłem zanurzyć się w świat projektowania i kodowania stron, stale doskonaląc swoje umiejętności na licznych kursach i w realnych projektach. Niezależnie od tego, czy tworzę stronę internetową, sklep czy system usprawniający procesy w firmie zawsze staram się osiągnąć pożądane cele.
+        </p>
+        <p class="mb-0" itemprop="description">
+         Moje podejście do projektowania opiera się skupieniu na użytkowniku. Zawsze staram się tworzyć intuicyjne strony i <b>atrakcyjne wrażenia</b> dla użytkowników końcowych. Wierzę, że świetny projekt wykracza poza estetykę – chodzi o <b>rozwiązywanie problemów</b>, <b>wywoływanie emocji</b> i wywieranie <b>znaczącego wpływu</b>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="number-talks py-5" itemscope itemtype="http://schema.org/Organization">
+  <div class="container py-5 animated">
+    <div class="row row-cols-1 row-cols-lg-4 g-4 pb-4">
+      <h2 class="text-center w-100 mb-2" itemprop="headline">W liczbach</h2>
+      <p class=" mb-5 display-8 text-center w-100 mt-0" itemprop="description">To co zrobiłem przedstawione w liczbach</p>
+
+      <div class="col animated" itemscope itemtype="http://schema.org/Thing">
+        <div class="card h-100 p-4">
+          <h3 class="h1 text-dark mb-4">
+            <span class="display-5 fw-bold" itemprop="additionalType">8<span class="accent-text mb-0 blue fw-bold"> +</span></span>
+          </h3>
+          <p class=" display-8" itemprop="description">Lat doświadczenia</p>
+        </div>
+      </div>
+
+      <div class="col animated" itemscope itemtype="http://schema.org/Thing">
+        <div class="card h-100 p-4">
+          <h3 class="h1 text-dark mb-4">
+            <span class="display-5 fw-bold" itemprop="additionalType">70<span class="accent-text mb-0 blue fw-bold"> +</span></span>
+          </h3>
+          <p class=" display-8" itemprop="description">Skończonych projektów</p>
+        </div>
+      </div>
+
+      <div class="col animated" itemscope itemtype="http://schema.org/Thing">
+        <div class="card h-100 p-4">
+          <h3 class="h1 text-dark mb-4">
+            <span class="display-5 fw-bold" itemprop="additionalType">40<span class="accent-text mb-0 blue fw-bold"> +</span></span>
+          </h3>
+          <p class=" display-8" itemprop="description">Zadowolonych klientów</p>
+        </div>
+      </div>
+
+      <div class="col animated d-flex">
+        <a href="/#opinie" class="col bg-primary d-flex align-items-center justify-content-between text-white p-3 text-decoration-none rounded-20">
+          <h3 class="h4 color-light m-0">Przeczytaj opinie klientów</h3>
+          <svg class="ms-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="width:28px;" xml:space="preserve">
+            <style type="text/css">
+              .st0{fill:#CFE2FF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#448FFE;}
+            </style>
+            <g>
+              <path class="st0" d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"/>
+              <path class="st1" d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
+              c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</section>

@@ -35,7 +35,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 206, 27, 27;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -175,6 +175,7 @@ h4 {
 .h1,
 h1 {
   font-size: calc(1.375rem + 1.5vw);
+  line-height: 1.1;
 }
 @media (min-width: 1200px) {
   .h1,
@@ -1465,6 +1466,10 @@ iframe {
   }
   .pb-md-2 {
     padding-bottom: 0.5rem !important;
+  }
+  .px-md-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 }
 @media (min-width: 992px) {

@@ -1,22 +1,20 @@
 ---
+layout: layouts/page.njk
+uptitle: Dane kontaktowe
 title: Kontakt
 description: Skontaktuj się ze mną telefonicznie, mailowo lub poprzez formularz kontaktowy. Chętnie podpowiem i pomogę wybrać optymalne rozwiązanie.
 ---
 
-{% include "sections/form.njk" %}
+ <section class="pricing py-5 position-relative">
+    <div class="container mb-5">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6">
+        {% include "sections/form.njk" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
-<style>
-    input,
-    textarea {
-        padding: 1em;
-        width: 100%;
-        background: transparent;
-        border: 1px solid #999;
-        border-radius: 25px;
-        color: #fff;    
-    }
-    input::placeholder,
-    textarea::placeholder {
-        color: #ddd;    
-    }
-</style>
+
+

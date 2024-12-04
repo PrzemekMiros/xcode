@@ -1,28 +1,39 @@
 ---
+layout: layouts/page.njk
+uptitle: Zobacz
 title: Realizacje
 description: Zobacz wybrane realizacje stron, sklepów i portali internetowych które wykonałem.
 ---
 
-<section class="pt-medium pb-medium bg-light-1 radius-lg">
-    <div class="container">
-    <div class="row g-3 g-md-4">
-    {% for post in collections.works %}
-        <div class="col-md-6 mb-4">
-           <div class="work-card radius-sm">
-                <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
-                {% workImage "src/" + post.data.thumbnail, post.data.title %}
-                <div class="work-card-content p-4">
-                    <p class="subheading my-0 bold color-light-3"> 
-                        {{ post.data.client }}
-                    </p>
-                    <h3 class="mt-2 color-light-1">
-                        {{ post.data.title }}
-                    </h3>
-                </div>
-                </a>
-           </div> 
-        </div>
-    {% endfor %}
+
+<section class="pricing position-relative" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="container-lg pb-4 py-5 w-60">
+      <div class="container px-3">
+        {% for post in collections.works %}
+        <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
+          <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation">
+                      <div class="col mt-0 d-flex p-3 flex-column" itemscope="" itemtype="http://schema.org/Service">
+                        <div class="flex-grow-1">
+                          <p class="h6 mb-2">{{ post.data.client }}</p>
+                          <h3 class="card-title h4">{{ post.data.title }}</h3>
+                        </div>
+                        <div class="mt-auto">
+                          <p class="my-2 muted-50 display-10">ELEMENTY:</p>
+                          <ul class="ps-0 mb-0">
+                            <li class="badge badge-pill mb-1" itemprop="serviceType">Projekt</li>
+                            <li class="badge badge-pill mb-1" itemprop="serviceType">Kodowanie</li>
+                            <li class="badge badge-pill mb-1" itemprop="serviceType">Optymalizacja</li>
+                          </ul>
+                        </div>
+                      </div>
+            <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
+              <div class="h-100 rounded-corners-20">
+                {% workImage "src/" + post.data.thumbnail, post.data.title, "class" %}
+              </div>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
     </div>
-    </div>
-</section>
+  </section>

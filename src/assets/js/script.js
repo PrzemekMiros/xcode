@@ -15,31 +15,26 @@ function appMain() {
 // Lazy blur images
 if (document.querySelector(".blur-load")) {
     const blurImgWrap = document.querySelectorAll(".blur-load");
-
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const item = entry.target;
                 const img = item.querySelector("picture img");
-
                 function loaded() {
                     item.classList.add("loaded");
                 }
-
                 if (img.complete) {
                     loaded();
                 } else {
                     img.addEventListener("load", loaded);
                 }
-
-                // Przestań obserwować element po jego załadowaniu
                 observer.unobserve(item);
             }
         });
     }, {
-        root: null, // Domyślnie okno przeglądarki
-        rootMargin: "300px", // Rozpocznij ładowanie, gdy element jest 200px poza widokiem
-        threshold: 0 // Brak minimalnego procentu widoczności
+        root: null, 
+        rootMargin: "500px", 
+        threshold: 0 
     });
 
     blurImgWrap.forEach((item) => {
@@ -128,7 +123,57 @@ if (document.querySelector(".blur-load")) {
 	handleSubmit('briefForm', '/wyslano-formularz');
 	handleSubmit('contactForm', '/wyslano-formularz');
 
-
+	
+	// Modals
+		// Funkcja generująca modal
+		function createModal() {
+		  const modalHTML = `
+			<div class="modal" id="modal-one">
+			  <div class="modal-bg modal-exit"></div>
+			  <div class="modal-container shadow">
+			   <div class="modal-wrap">
+				<iframe src="https://cal.com/przemys%C5%82aw-miros/niezobowiazujaca-rozmowa" style="border-width:0" width="100%" frameborder="0"></iframe>
+				<span class="modal-close modal-exit">X</span>
+			   </div>
+			  </div>
+			</div>
+		  `;
+	  
+		  // Tworzenie elementu DOM z kodu HTML
+		  const div = document.createElement("div");
+		  div.innerHTML = modalHTML;
+	  
+		  // Dodanie modala do dokumentu
+		  document.body.appendChild(div.firstElementChild);
+		}
+	  
+		// Dodanie modala do strony
+		createModal();
+	  
+		// Delegacja zdarzeń dla otwierania i zamykania modala
+		document.addEventListener("click", function (event) {
+		  // Sprawdź, czy kliknięto element z atrybutem data-modal
+		  const trigger = event.target.closest("[data-modal]");
+		  if (trigger) {
+			event.preventDefault();
+			const modalId = trigger.dataset.modal;
+			const modal = document.getElementById(modalId);
+			if (modal) {
+			  modal.classList.add("open");
+			}
+		  }
+	  
+		  // Zamknij modal, jeśli kliknięto modal-exit
+		  const exit = event.target.closest(".modal-exit");
+		  if (exit) {
+			const modal = exit.closest(".modal");
+			if (modal) {
+			  modal.classList.remove("open");
+			}
+		  }
+		});
+	  
+  
 
 // End
 };
