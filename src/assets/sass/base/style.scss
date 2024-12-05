@@ -399,9 +399,6 @@ nav {
   height: auto;
   transition: transform 0.3s;
 }
-.navbar-brand img:hover {
-  transform: rotate(-3deg);
-}
 .btn:hover::after {
   animation: 2s linear glowingThin-hover;
 }
@@ -770,7 +767,7 @@ nav {
 }
 @media(min-width:767px) {
   .pricing-header {
-    padding-top: 11%;
+    padding-top: 10%;
   }
 }
 .custom-card {
