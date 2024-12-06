@@ -7,7 +7,7 @@ author: Przemek Miros
 client: Staltom
 link: https://staltom.com.pl/
 thumbnail: /content/works/img/moc-staltom.jpg
-order: 2
+order: 7
 date: 2022-02-02T23:00:00.000Z
 category:
   - Strona internetowa

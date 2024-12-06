@@ -6,7 +6,7 @@ author: Przemek Miros
 client: Call Your Soul
 link: https://callyoursoul.pl/
 thumbnail: /content/works/img/moc-soul.jpg
-order: 3
+order: 14
 date: 2022-11-15T23:00:00.000Z
 category:
   - Strona internetowa

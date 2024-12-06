@@ -1431,9 +1431,6 @@ iframe {
   z-index: 3 !important;
 }
 @media (min-width: 576px) {
-  .d-sm- {
-    display: !important;
-  }
   .d-sm-flex {
     display: flex !important;
   }
@@ -1472,6 +1469,9 @@ iframe {
   }
   .mb-md-0 {
     margin-bottom: 0 !important;
+  }
+  .mt-md-0 {
+    margin-top: 0 !important;
   }
   .pb-md-2 {
     padding-bottom: 0.5rem !important;

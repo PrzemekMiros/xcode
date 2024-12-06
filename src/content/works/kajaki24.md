@@ -8,7 +8,7 @@ category:
   - Strona internetowa
 link: https://kajaki24.com.pl/
 thumbnail: /content/works/img/moc-kajaki.jpg
-order: 14
+order: 6
 ---
 
 ## Wypożyczalnia Kajaków
