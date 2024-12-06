@@ -5,7 +5,7 @@
       <div class="container pb-2">
         {% for post in collections.works.slice(0, 6) %}
         <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
-          <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation">
+          <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 flex-md-row-reverse card-style align-items-stretch card-animation">
                       <div class="col mt-0 d-flex p-3 flex-column" itemscope="" itemtype="http://schema.org/Service">
                         <div class="flex-grow-1">
                           <p class="h6 mb-2">{{ post.data.client }}</p>

@@ -400,6 +400,12 @@ iframe {
   flex: 0 0 auto;
   width: 100%;
 }
+.g-0 {
+  --bs-gutter-x: 0rem;
+}
+.g-0 {
+  --bs-gutter-y: 0rem;
+}
 .g-2 {
   --bs-gutter-x: .5rem;
 }
@@ -1445,7 +1451,7 @@ iframe {
     padding-left: 1.5rem !important;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .d-md-none {
     display: none !important;
   }
@@ -1457,6 +1463,9 @@ iframe {
   }
   .flex-md-row {
     flex-direction: row !important;
+  }
+  .flex-md-row-reverse {
+    flex-direction: row-reverse !important;
   }
   .me-md-3 {
     margin-right: 1rem !important;

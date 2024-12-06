@@ -160,7 +160,7 @@ h1 {
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: #fff;
   font-family: Rubik;
-  font-size: calc(1.1rem + 2.9vw);
+  font-size: calc(1.1rem + 3.3vw);
   font-style: normal;
 }
 h2,
@@ -230,7 +230,7 @@ nav {
   box-shadow: none;
 }
 .navbar-nav a {
-  margin: 0.5em 1em;
+  margin: 0.5em .2em;
 }
 .navbar-nav a:hover {
   font-weight: 500 !important;
@@ -683,6 +683,11 @@ nav {
     min-height: 110px;
   }
 }
+@media(min-width:1200px) {
+  .navbar-nav a {
+    margin: 0.5em 1em;
+  }
+}
 .profile img {
   border-radius: 45px;
   border: 2px solid #fff;
@@ -857,8 +862,6 @@ nav {
     height: calc(100vh - 100px);
   }
   nav {
-    margin: 0 20px;
-    width: calc(100% - 40px) !important;
     background: #fff;
   }
   .nav-link {
