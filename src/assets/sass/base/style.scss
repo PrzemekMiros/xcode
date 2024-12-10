@@ -445,7 +445,8 @@ nav {
   border: 1px solid rgba(34, 34, 34, 0.2);
   font-weight: 500;
 }
-.case-details:after,
+@media(min-width:767px) {
+  .case-details:after,
 .faq:after,
 .intro:after,
 .latest-projects:after,
@@ -456,6 +457,7 @@ nav {
   z-index: -1;
   border-radius: 20%;
   content: "";
+}
 }
 @keyframes scroll-logo {
   0% {
@@ -486,19 +488,16 @@ nav {
   border-radius: 40px;
   background: linear-gradient(180deg, #f7f7f7 80%, #e6ebf2 100%);
 }
-.case-details:after,
+@media(min-width:767px) {
+  .case-details:after,
 .faq:after,
-.intro:after,
-.pricing-header:after {
+.intro:after {
   bottom: -50px;
   left: 50%;
   width: 95%;
   height: 50%;
   background: rgba(68, 143, 254, 0.3);
   filter: blur(50px);
-}
-.pricing-header:after {
-  bottom: 25%;
 }
 .latest-projects:before {
   top: -50px;
@@ -515,6 +514,7 @@ nav {
   height: 10%;
   background: #c91717;
   filter: blur(30px);
+}
 }
 .latest-projects {
   border-radius: 40px;
@@ -537,9 +537,15 @@ nav {
   align-items: center;
   justify-content: center;
   background-position: center;
+}
+@media(min-width:767px) {
+  .book-a-call-calendar,
+.contact-us,
+.tools-section .container {
   background-image: url(/assets/img/template/bgr-globe.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
 }
 .tools-section h2 {
   font-size: 2em;
@@ -548,7 +554,7 @@ nav {
 .tools-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 440px;
 }
 .tool-item {
   color: #e0e0ed;
@@ -736,6 +742,10 @@ nav {
   justify-content: center;
   display: flex;
 }
+.border-bottom {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
 .slider {
   display: flex;
   width: 144%;
@@ -773,6 +783,10 @@ nav {
 @media(min-width:767px) {
   .pricing-header {
     padding-top: 10%;
+  }
+  .border-bottom {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 }
 .custom-card {
