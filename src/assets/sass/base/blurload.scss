@@ -5,7 +5,6 @@
   .blur-load .placeholder {
     height: inherit;
     width: 100%;
-    filter: blur(8px);
     transition: .2s cubic-bezier(.79,0,.07,.88);
     object-fit: cover;
     object-position: center;
@@ -31,3 +30,9 @@
   .blur-load.loaded picture img {
     opacity: 1
   } 
+
+  @media(min-width:767px) {
+    .blur-load .placeholder {
+      filter: blur(8px);
+    }
+  }
