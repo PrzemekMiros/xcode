@@ -165,7 +165,7 @@ h1 {
 }
 h2,
 h2 span {
-  font-size: calc(1rem + 1.4vw);
+  font-size: calc(1rem + 1.9vw);
 }
 a {
   text-decoration: none;
@@ -430,11 +430,11 @@ nav {
   border-radius: 20px;
   border: 1px solid #eaeaeb;
   background: #fff !important;
-  transition: box-shadow 0.5s, transform 0.3s;
+  transition: .3s ease-in-out;
 }
 .card-img {
   border-radius: 16px 16px 0 0;
-  background: linear-gradient(0deg, #fff 0, #f7f7f7 100%);
+  background: #fafafa
 }
 .badge-pill {
   font-size: 13px;
@@ -506,14 +506,6 @@ nav {
   height: 50%;
   background: rgba(68, 143, 254, 0.4);
   filter: blur(50px);
-}
-.latest-projects:after {
-  top: 10px;
-  left: 50%;
-  width: 40%;
-  height: 10%;
-  background: #c91717;
-  filter: blur(30px);
 }
 }
 .latest-projects {
