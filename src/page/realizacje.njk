@@ -5,33 +5,60 @@ title: Realizacje
 description: Zobacz wybrane realizacje stron, sklepów i portali internetowych które wykonałem.
 ---
 
+<section
+  class="position-relative bg-light"
+  itemscope
+  itemtype="http://schema.org/CreativeWork"
+>
+  <div class="container pb-5 pt-2 w-60">
 
-<section class="pricing position-relative" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="container-lg py-4 px-3 w-60">
-        {% for post in collections.works %}
-        <a href="{{ post.data.link }}" title="{{ post.data.title }}" target="_blank">
-          <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 card-style align-items-stretch card-animation">
-                      <div class="col mt-0 d-flex p-3 flex-column" itemscope="" itemtype="http://schema.org/Service">
-                        <div class="flex-grow-1">
-                          <p class="h6 mb-2">{{ post.data.client }}</p>
-                          <h3 class="card-title h4">{{ post.data.title }}</h3>
-                        </div>
-                        <div class="mt-auto">
-                          <p class="my-2 muted-50 display-10">ELEMENTY:</p>
-                          <ul class="ps-0 mb-0">
-                            <li class="badge badge-pill mb-1" itemprop="serviceType">Projekt</li>
-                            <li class="badge badge-pill mb-1" itemprop="serviceType">Kodowanie</li>
-                            <li class="badge badge-pill mb-1" itemprop="serviceType">Optymalizacja</li>
-                          </ul>
-                        </div>
-                      </div>
-            <div class="col mt-0" itemscope="" itemtype="http://schema.org/Service">
-              <div class="h-100 rounded-corners-20">
-                {% workImage "src/" + post.data.thumbnail, post.data.title, "class" %}
-              </div>
+    <div class="container">
+      {% for post in collections.works %}
+      <a
+        href="{{ post.data.link }}"
+        title="{{ post.data.title }}"
+        target="_blank"
+      >
+        <div
+          class="row row-cols-1 row-cols-lg-2 g-4 mb-5 mt-5 py-3 flex-md-row-reverse card-style align-items-stretch card-animation"
+        >
+          <div
+            class="col mt-0"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="h-100 rounded-corners-20">
+              {% workImage "src/" + post.data.thumbnail, post.data.title,
+              "class" %}
             </div>
           </div>
-        </a>
-        {% endfor %}
+          <div
+            class="col mt-0 d-flex p-3 flex-column"
+            itemscope=""
+            itemtype="http://schema.org/Service"
+          >
+            <div class="flex-grow-1">
+              <p class="h6 mb-2">{{ post.data.client }}</p>
+              <h3 class="card-title h4">{{ post.data.title }}</h3>
+            </div>
+            <div class="mt-auto">
+              <p class="my-2 muted-50 display-10">ELEMENTY:</p>
+              <ul class="ps-0 mb-0">
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Projekt
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Kodowanie
+                </li>
+                <li class="badge badge-pill mb-1" itemprop="serviceType">
+                  Optymalizacja
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
     </div>
-  </section>
+  </div>
+</section>
