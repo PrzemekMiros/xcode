@@ -82,7 +82,7 @@ strong {
 .h5,
 h5,
 p {
-  font-size: 0.95rem !important;
+  font-size: calc(.9rem + .2vw)!important;
 }
 .rounded-20 {
   border-radius: 20px !important;
