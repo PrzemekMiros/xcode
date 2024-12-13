@@ -9,8 +9,8 @@
     <h2 class="text-center w-100 mb-5" itemprop="headline">
       Wybrane realizacje
     </h2>
-    <div class="container pb-2">
-      {% for post in collections.works.slice(0, 6) %}
+    <div class="container pb-4">
+      {% for post in collections.works.slice(0, 3) %}
       <a
         href="{{ post.data.link }}"
         title="{{ post.data.title }}"
@@ -56,6 +56,21 @@
         </div>
       </a>
       {% endfor %}
+        <div class="text-center">
+            <a href="/realizacje/" title="Zobacz więcej realizacji" class="btn btn-primary btn-lg ps-4 pe-4 py-2 mt-2 mb-4 d-flex" itemprop="url">Zobacz więcej realizacji
+                <svg class="ms-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                      viewBox="0 0 18 18" style="width:18px;" xml:space="preserve">
+                        <style type="text/css">
+                                        .st0{fill:#fff;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#c91717;}
+                        </style>
+                        <g>
+                                        <path class="st0" d="M5,0h6c2.8,0,5,2.2,5,5v6c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5V5C0,2.2,2.2,0,5,0z"/>
+                                        <path class="st1" d="M8.6,4.5c0.4-0.4,1-0.4,1.4,0l2.8,2.8c0.4,0.4,0.4,1,0,1.4L10,11.5c-0.4,0.4-1,0.4-1.4,0
+                                        c-0.4-0.4-0.4-1,0-1.4L9.7,9H3.9c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h5.8L8.6,5.9C8.2,5.5,8.2,4.9,8.6,4.5z"/>
+                        </g>
+                  </svg>
+              </a>
+        </div>
     </div>
   </div>
 </section>

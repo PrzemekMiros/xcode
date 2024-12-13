@@ -1,0 +1,76 @@
+---
+layout: layouts/page.njk
+uptitle: Zobacz
+title: Schowek
+description: 
+---
+
+
+<section class="pricing position-relative" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="container-lg py-4 px-3 w-60">
+        <div class="single-storage card p-4" data-id="1">
+            <h3 class="single-storage-title">Element</h3>
+            <div>Cena za szt: <span id="storage-price-to-calc">50</span> zł</div>
+            <label>
+                Ilość:
+                <input type="number" id="storage-people-count" min="1" value="1">
+            </label>
+        </div>
+
+        <div class="additional-storages">
+            <h4>Dodatki</h4>
+                <div class="more-storage-item card p-4">
+                    <h3 class="more-storage-title">Dodatek 1</h3>
+                    <p>Cena: <span class="more-storage-price">20</span> zł</p>
+                    <button class="more-storage-add-to-card-btn">Dodaj</button>
+                </div>
+                <div class="more-storage-item card p-4">
+                    <h3 class="more-storage-title">Dodatek 2</h3>
+                    <p>Cena: <span class="more-storage-price">15</span> zł</p>
+                    <button class="more-storage-add-to-card-btn">Dodaj</button>
+                </div>
+        </div>
+
+        <div>
+            <div>Suma: <span id="storage-add-to-card-price">50</span> zł</div>
+            <button id="storage-add-to-card-btn">Dodaj</button>
+        </div>
+
+        <div>
+            <button data-modal="cart-modal">Zobacz schowek</button>
+        </div>
+
+        <div class="storage-modal" id="cart-modal">
+            <h2>Schowek</h2>
+            <div id="cart"></div>
+            <div id="total">Łączna cena: 0.00 zł</div>
+            <button class="modal-exit">Zamknij</button>
+        </div>
+    </div>
+</section>
+
+      <style>
+        .storage-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+            width: 80%;
+            max-width: 500px;
+        }
+        .storage-modal.open {
+            display: block;
+        }
+        .storage-modal .modal-exit {
+            cursor: pointer;
+            color: red;
+        }
+        .storage-modal #cart {
+            margin: 20px 0;
+        }
+    </style>

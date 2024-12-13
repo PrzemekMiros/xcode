@@ -24,15 +24,10 @@
     object-fit: cover;
     object-position: center;
     transition: .5s cubic-bezier(.79,0,.07,.88);
+    will-change: opacity;
     opacity: 0
   }
   
   .blur-load.loaded picture img {
     opacity: 1
   } 
-
-  @media(min-width:767px) {
-    .blur-load .placeholder {
-      filter: blur(8px);
-    }
-  }

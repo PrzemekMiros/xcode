@@ -34,7 +34,7 @@ module.exports = function(eleventyConfig) {
       }
     
       let stats = await Image(src, {
-        widths: [25, 320, 640, 960, 1200, 1800 ],
+        widths: [25, 320, 640, 960, 1200],
         formats: ['jpeg', 'webp'],
         urlPath: '/assets/img/',
         outputDir: './public/assets/img/',
@@ -76,7 +76,7 @@ module.exports = function(eleventyConfig) {
       }
     
       let stats = await Image(src, {
-        widths: [25, 320, 640, 960, 1200, 1800 ],
+        widths: [25, 320, 640, 960, 1200],
         formats: ['jpeg', 'webp'],
         urlPath: '/assets/img/',
         outputDir: './public/assets/img/',
@@ -118,7 +118,7 @@ module.exports = function(eleventyConfig) {
         }
       
         let stats = await Image(src, {
-          widths: [25, 320, 640, 960, 1200, 1800 ],
+          widths: [25, 320, 640, 960, 1200],
           formats: ['jpeg', 'webp'],
           urlPath: '/content/works/img/',
           outputDir: './public/content/works/img/',
@@ -159,7 +159,7 @@ module.exports = function(eleventyConfig) {
         }
     
         let stats = await Image(src, {
-          widths: [25, 320, 640, 960, 1200, 1800 ],
+          widths: [25, 320, 640, 960, 1200],
           formats: ['jpeg', 'webp'],
           urlPath: '/content/posts/img/',
           outputDir: './public/content/posts/img/',

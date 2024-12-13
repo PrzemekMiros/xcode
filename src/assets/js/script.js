@@ -15,27 +15,31 @@ function appMain() {
 // Lazy blur images
 if (document.querySelector(".blur-load")) {
     const blurImgWrap = document.querySelectorAll(".blur-load");
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const item = entry.target;
-                const img = item.querySelector("picture img");
-                function loaded() {
-                    item.classList.add("loaded");
-                }
-                if (img.complete) {
-                    loaded();
-                } else {
-                    img.addEventListener("load", loaded);
-                }
-                observer.unobserve(item);
-            }
-        });
-    }, {
-        root: null, 
-        rootMargin: "500px", 
-        threshold: 0 
-    });
+	const observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const item = entry.target;
+				const img = item.querySelector("picture img");
+				
+				const loaded = () => {
+					item.classList.add("loaded");
+					img.removeEventListener("load", loaded);
+				};
+				
+				img.addEventListener("load", loaded);
+				
+				if (img.complete) {
+					loaded();
+				}
+				
+				observer.unobserve(item);
+			}
+		});
+	}, {
+		root: null, 
+		rootMargin: "300px", 
+		threshold: 0.1 
+	});	
 
     blurImgWrap.forEach((item) => {
         observer.observe(item);
