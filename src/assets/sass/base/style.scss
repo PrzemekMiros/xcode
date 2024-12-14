@@ -82,7 +82,7 @@ strong {
 .h5,
 h5,
 p {
-  font-size: calc(.9rem + .2vw)!important;
+  font-size: calc(.95rem + .1vw)!important;
 }
 .rounded-20 {
   border-radius: 20px !important;
@@ -242,8 +242,6 @@ nav {
 }
 .bd-highlight .btn,
 .bd-highlight span {
-  line-height: 28px;
-  font-size: 14px !important;
   letter-spacing: 1px;
   box-shadow: none !important;
 }
@@ -740,12 +738,12 @@ nav {
 }
 .slider {
   display: flex;
-  width: 144%;
+  width: 135.8%;
+  gap: 1em;
   animation: 80s linear infinite scroll;
 }
 .slider img {
   width: 360px;
-  margin: 0 10px;
   border-radius: 10px;
 }
 @keyframes scroll {

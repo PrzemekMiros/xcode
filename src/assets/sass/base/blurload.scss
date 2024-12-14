@@ -5,7 +5,7 @@
   .blur-load .placeholder {
     height: inherit;
     width: 100%;
-    transition: .2s cubic-bezier(.79,0,.07,.88);
+    transition: ease-in-out;
     object-fit: cover;
     object-position: center;
     z-index: 1
@@ -23,7 +23,7 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
-    transition: .5s cubic-bezier(.79,0,.07,.88);
+    transition: ease-in-out;
     will-change: opacity;
     opacity: 0
   }

@@ -127,57 +127,39 @@ if (document.querySelector(".blur-load")) {
 	handleSubmit('briefForm', '/wyslano-formularz');
 	handleSubmit('contactForm', '/wyslano-formularz');
 
+
 	
-	// Modals
-		// Funkcja generująca modal
-		function createModal() {
-		  const modalHTML = `
-			<div class="modal" id="modal-one">
-			  <div class="modal-bg modal-exit"></div>
-			  <div class="modal-container shadow">
-			   <div class="modal-wrap">
-				<iframe src="https://cal.com/przemys%C5%82aw-miros/niezobowiazujaca-rozmowa" style="border-width:0" width="100%" frameborder="0"></iframe>
-				<span class="modal-close modal-exit">X</span>
-			   </div>
-			  </div>
-			</div>
-		  `;
-	  
-		  // Tworzenie elementu DOM z kodu HTML
-		  const div = document.createElement("div");
-		  div.innerHTML = modalHTML;
-	  
-		  // Dodanie modala do dokumentu
-		  document.body.appendChild(div.firstElementChild);
-		}
-	  
-		// Dodanie modala do strony
-		createModal();
-	  
-		// Delegacja zdarzeń dla otwierania i zamykania modala
-		document.addEventListener("click", function (event) {
-		  // Sprawdź, czy kliknięto element z atrybutem data-modal
-		  const trigger = event.target.closest("[data-modal]");
-		  if (trigger) {
-			event.preventDefault();
-			const modalId = trigger.dataset.modal;
-			const modal = document.getElementById(modalId);
-			if (modal) {
-			  modal.classList.add("open");
-			}
-		  }
-	  
-		  // Zamknij modal, jeśli kliknięto modal-exit
-		  const exit = event.target.closest(".modal-exit");
-		  if (exit) {
-			const modal = exit.closest(".modal");
-			if (modal) {
-			  modal.classList.remove("open");
-			}
-		  }
-		});
-	  
-  
+// Sprawdzamy aktualną datę i czas
+function updateAvailability() {
+    const now = new Date();
+    const day = now.getDay(); // 0 = Niedziela, 1 = Poniedziałek, ..., 6 = Sobota
+    const hour = now.getHours();
+
+    // Elementy do ukrywania/pokazywania
+    const availableElements = document.querySelectorAll('.available');
+    const notAvailableElements = document.querySelectorAll('.not-available');
+
+    // Określamy warunki widoczności
+    const isWeekday = day >= 1 && day <= 5; // Poniedziałek - Piątek
+    const isSaturday = day === 6; // Sobota
+    const isAvailableTime = (isWeekday && hour >= 9 && hour < 17) || (isSaturday && hour >= 9 && hour < 15);
+
+    if (isAvailableTime) {
+        // Pokaż dostępne, ukryj niedostępne
+        availableElements.forEach(el => el.style.display = 'block');
+        notAvailableElements.forEach(el => el.style.display = 'none');
+    } else {
+        // Pokaż niedostępne, ukryj dostępne
+        availableElements.forEach(el => el.style.display = 'none');
+        notAvailableElements.forEach(el => el.style.display = 'block');
+    }
+}
+
+// Wywołaj funkcję na start i ustaw cykliczne sprawdzanie co minutę
+updateAvailability();
+setInterval(updateAvailability, 60000);
+
+
 
 // End
 };
