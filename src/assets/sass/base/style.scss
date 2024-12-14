@@ -61,6 +61,10 @@ body {
   font-family: Rubik, Arial, sans-serif;
   color: #444d58;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 .blue {
   color: #c91717;
 }
@@ -422,6 +426,7 @@ nav {
 }
 .logos img {
   margin: -14px 20px;
+  width: 130px;
 }
 .card,
 .card-style {
@@ -480,6 +485,10 @@ nav {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
+}
+.why-us img {
+  width: 36px;
+  height: 36px;
 }
 .intro {
   background-color: #f7f7f7;
@@ -558,6 +567,10 @@ nav {
   left: 50%;
   right: 50%;
   top: 50%;
+}
+.tool-item img {
+  width: 21px;
+  height: 21px;
 }
 .about-company,
 .about-me,
@@ -673,6 +686,10 @@ nav {
   height: 20%;
   background: linear-gradient(180deg, rgba(247, 247, 248, 0) 0, #f7f7f7 100%);
   z-index: 2;
+}
+.clients-testimonials img {
+  width: 55px;
+  height: 55px;
 }
 @media(min-width:767px) {
   .clients-testimonials .maintxt {
@@ -804,6 +821,10 @@ nav {
 .footer-links {
   background-color: #000e23;
 }
+.foot-logo {
+  width: 18px;
+  height: 18px
+}
 .case-header {
   padding-top: 140px;
   background: 0 0/64px #f7f7f7;
@@ -922,6 +943,10 @@ nav {
   overflow: hidden;
 }
 
+.rounded-corners-10 {
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 .modal {
   position: fixed;

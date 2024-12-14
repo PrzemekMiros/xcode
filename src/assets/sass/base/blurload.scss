@@ -8,17 +8,15 @@
     transition: ease-in-out;
     object-fit: cover;
     object-position: center;
+    display: block;
     z-index: 1
   }
   
   .blur-load.loaded .placeholder {
-    opacity: 0
+    display: none;
   }
   
   .blur-load picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
