@@ -14,7 +14,7 @@ nav {
 .btn,
 .btn-primary,
 .btn-secondary,
-.head-conteiner,
+.head-container,
 .interactive-header,
 .logo-container,
 .year-founded {
@@ -22,6 +22,10 @@ nav {
 }
 figure {
   margin: 0;
+}
+.head-container img {
+  width: 40px;
+  height: 40px;
 }
 @font-face {
   font-family: "Square Peg";
